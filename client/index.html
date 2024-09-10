@@ -50,224 +50,234 @@
 
     <main class="container mx-auto px-4 py-8">
       <div class="flex flex-col lg:flex-row gap-8">
-        <section class="bg-white rounded-lg shadow-md p-6 flex-1">
-          <h2 class="text-2xl font-semibold mb-4">Order Your Custom Sticker</h2>
-          <form id="orderForm" class="space-y-4">
-            <div id="imageUploadGroup" class="mb-4">
-              <label for="image" class="block font-medium mb-2"
-                >Upload Image</label
-              >
-              <div class="relative">
-                <input
-                  type="file"
-                  id="image"
-                  name="image"
-                  accept="image/*"
-                  class="hidden"
-                />
-                <div
-                  id="dropzone"
-                  class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center cursor-pointer hover:border-blue-500 transition duration-300"
+        <div class="flex-1">
+          <section class="bg-white rounded-lg shadow-md p-6 mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Order Your Custom Sticker</h2>
+            <form id="orderForm" class="space-y-4">
+              <div id="imageUploadGroup" class="mb-4">
+                <label for="image" class="block font-medium mb-2"
+                  >Upload Image</label
                 >
-                  <div class="mb-4">
-                    <i
-                      class="fas fa-cloud-upload-alt text-4xl text-gray-400"
-                    ></i>
-                  </div>
-                  <p class="text-gray-600 mb-2">
-                    Drag and drop your image here
-                  </p>
-                  <p class="text-gray-500 text-sm">or</p>
-                  <button
-                    type="button"
-                    class="mt-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded transition duration-300"
+                <div class="relative">
+                  <input
+                    type="file"
+                    id="image"
+                    name="image"
+                    accept="image/*"
+                    class="hidden"
+                  />
+                  <div
+                    id="dropzone"
+                    class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center cursor-pointer hover:border-blue-500 transition duration-300"
                   >
-                    Choose File
-                  </button>
-                  <p id="file-name" class="mt-2 text-sm text-gray-500"></p>
+                    <div class="mb-4">
+                      <i
+                        class="fas fa-cloud-upload-alt text-4xl text-gray-400"
+                      ></i>
+                    </div>
+                    <p class="text-gray-600 mb-2">
+                      Drag and drop your image here
+                    </p>
+                    <p class="text-gray-500 text-sm">or</p>
+                    <button
+                      type="button"
+                      class="mt-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded transition duration-300"
+                    >
+                      Choose File
+                    </button>
+                    <p id="file-name" class="mt-2 text-sm text-gray-500"></p>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div id="shapeGroup" class="relative">
-              <label for="shape" class="block font-medium mb-1">Shape</label>
-              <select
-                id="shape"
-                name="shape"
-                class="w-full border border-gray-300 rounded px-3 py-2 appearance-none bg-white pr-8 cursor-pointer hover:cursor-pointer"
-              >
-                <option value="">Select a shape</option>
-                <option value="Circle">Circle</option>
-                <option value="Square">Square</option>
-                <option value="Oval">Oval</option>
-                <option value="Rectangle">Rectangle</option>
-              </select>
-              <div
-                class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
-                style="top: 24px"
-              >
-                <svg
-                  class="fill-current h-4 w-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
+              <div id="shapeGroup" class="relative">
+                <label for="shape" class="block font-medium mb-1">Shape</label>
+                <select
+                  id="shape"
+                  name="shape"
+                  class="w-full border border-gray-300 rounded px-3 py-2 appearance-none bg-white pr-8 cursor-pointer hover:cursor-pointer"
                 >
-                  <path
-                    d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
-                  />
-                </svg>
-              </div>
-            </div>
-
-            <div id="sizeGroup" class="relative">
-              <label for="size" class="block font-medium mb-1">Size</label>
-              <select
-                id="size"
-                name="size"
-                class="w-full border border-gray-300 rounded px-3 py-2 appearance-none bg-white pr-8 cursor-pointer hover:cursor-pointer disabled:bg-gray-100 disabled:text-gray-400 disabled:cursor-not-allowed"
-              >
-                <option value="">Select a size</option>
-                <!-- Options will be dynamically populated -->
-              </select>
-              <div
-                class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
-                style="top: 24px"
-              >
-                <svg
-                  class="fill-current h-4 w-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
+                  <option value="">Select a shape</option>
+                  <option value="Circle">Circle</option>
+                  <option value="Square">Square</option>
+                  <option value="Oval">Oval</option>
+                  <option value="Rectangle">Rectangle</option>
+                </select>
+                <div
+                  class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+                  style="top: 24px"
                 >
-                  <path
-                    d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
-                  />
-                </svg>
-              </div>
-              <p id="sizeHelpText" class="text-sm text-gray-500 mt-1 hidden">
-                Please select a shape first
-              </p>
-            </div>
-
-            <div id="quantityGroup" class="relative">
-              <label for="quantity" class="block font-medium mb-1"
-                >Quantity</label
-              >
-              <select
-                id="quantity"
-                name="quantity"
-                class="w-full border border-gray-300 rounded px-3 py-2 appearance-none bg-white pr-8 cursor-pointer hover:cursor-pointer"
-              >
-                <option value="">Select a quantity</option>
-                <!-- Options will be dynamically populated -->
-              </select>
-              <div
-                class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
-                style="top: 24px"
-              >
-                <svg
-                  class="fill-current h-4 w-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
-                  />
-                </svg>
-              </div>
-            </div>
-
-            <div id="priceDisplay" class="text-xl font-bold"></div>
-
-            <div class="flex items-center justify-between gap-8">
-              <button
-                id="addToCart"
-                type="submit"
-                class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
-              >
-                Add to cart
-              </button>
-              <div
-                id="cart-summary"
-                class="bg-gray-200 py-2 px-4 rounded hover:bg-gray-300 cursor-pointer flex justify-center"
-              >
-                <a class="snipcart-checkout">
-                  <i id="cart-icon" class="fas fa-shopping-cart"></i>
-                  <span id="cart-items" class="snipcart-items-count">0</span>
-                  items -
-                  <span id="cart-total" class="snipcart-total-price"
-                    >$0.00</span
+                  <svg
+                    class="fill-current h-4 w-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
                   >
-                </a>
+                    <path
+                      d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div id="sizeGroup" class="relative">
+                <label for="size" class="block font-medium mb-1">Size</label>
+                <select
+                  id="size"
+                  name="size"
+                  class="w-full border border-gray-300 rounded px-3 py-2 appearance-none bg-white pr-8 cursor-pointer hover:cursor-pointer disabled:bg-gray-100 disabled:text-gray-400 disabled:cursor-not-allowed"
+                >
+                  <option value="">Select a size</option>
+                  <!-- Options will be dynamically populated -->
+                </select>
+                <div
+                  class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+                  style="top: 24px"
+                >
+                  <svg
+                    class="fill-current h-4 w-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                    />
+                  </svg>
+                </div>
+                <p id="sizeHelpText" class="text-sm text-gray-500 mt-1 hidden">
+                  Please select a shape first
+                </p>
+              </div>
+
+              <div id="quantityGroup" class="relative">
+                <label for="quantity" class="block font-medium mb-1"
+                  >Quantity</label
+                >
+                <select
+                  id="quantity"
+                  name="quantity"
+                  class="w-full border border-gray-300 rounded px-3 py-2 appearance-none bg-white pr-8 cursor-pointer hover:cursor-pointer"
+                >
+                  <option value="">Select a quantity</option>
+                  <!-- Options will be dynamically populated -->
+                </select>
+                <div
+                  class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+                  style="top: 24px"
+                >
+                  <svg
+                    class="fill-current h-4 w-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div id="priceDisplay" class="text-xl font-bold"></div>
+
+              <div class="flex items-center justify-between gap-8">
+                <button
+                  id="addToCart"
+                  type="submit"
+                  class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
+                >
+                  Add to cart
+                </button>
+                <div
+                  id="cart-summary"
+                  class="bg-gray-200 py-2 px-4 rounded hover:bg-gray-300 cursor-pointer flex justify-center"
+                >
+                  <a class="snipcart-checkout">
+                    <i id="cart-icon" class="fas fa-shopping-cart"></i>
+                    <span id="cart-items" class="snipcart-items-count">0</span>
+                    items -
+                    <span id="cart-total" class="snipcart-total-price"
+                      >$0.00</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </form>
+          </section>
+
+          <section class="bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-2xl font-semibold mb-4">Sticker Preview</h2>
+            <div class="border rounded-lg p-4 mb-4">
+              <div
+                id="stickerDisplay"
+                class="w-full max-w-sm mx-auto aspect-square relative overflow-hidden mb-4"
+              >
+                <img
+                  id="uploadedImage"
+                  src="/placeholder.png"
+                  alt="Uploaded image"
+                  class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-[150%] max-h-[150%] object-cover"
+                />
               </div>
             </div>
-          </form>
-        </section>
-
-        <section class="bg-white rounded-lg shadow-md p-6 flex-1">
-          <h2 class="text-2xl font-semibold mb-4">Sticker Preview</h2>
-          <div class="border rounded-lg p-4 mb-4">
-            <div
-              id="stickerDisplay"
-              class="w-full max-w-sm mx-auto aspect-square relative overflow-hidden mb-4"
-            >
-              <img
-                id="uploadedImage"
-                src="/placeholder.png"
-                alt="Uploaded image"
-                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-[150%] max-h-[150%] object-cover"
-              />
+            <div class="border rounded-lg p-4">
+              <div class="flex justify-center space-x-2 mb-4">
+                <button
+                  id="moveLeft"
+                  class="bg-gray-200 hover:bg-gray-300 py-2 px-4 rounded"
+                >
+                  ←
+                </button>
+                <button
+                  id="moveUp"
+                  class="bg-gray-200 hover:bg-gray-300 py-2 px-4 rounded"
+                >
+                  ↑
+                </button>
+                <button
+                  id="moveDown"
+                  class="bg-gray-200 hover:bg-gray-300 py-2 px-4 rounded"
+                >
+                  ↓
+                </button>
+                <button
+                  id="moveRight"
+                  class="bg-gray-200 hover:bg-gray-300 py-2 px-4 rounded"
+                >
+                  →
+                </button>
+              </div>
+              <div class="flex justify-center space-x-2">
+                <button
+                  id="zoomOut"
+                  class="bg-gray-200 hover:bg-gray-300 py-2 px-4 rounded"
+                >
+                  -
+                </button>
+                <button
+                  id="zoomIn"
+                  class="bg-gray-200 hover:bg-gray-300 py-2 px-4 rounded"
+                >
+                  +
+                </button>
+              </div>
             </div>
-          </div>
-          <div class="border rounded-lg p-4">
-            <div class="flex justify-center space-x-2 mb-4">
-              <button
-                id="moveLeft"
-                class="bg-gray-200 hover:bg-gray-300 py-2 px-4 rounded"
-              >
-                ←
-              </button>
-              <button
-                id="moveUp"
-                class="bg-gray-200 hover:bg-gray-300 py-2 px-4 rounded"
-              >
-                ↑
-              </button>
-              <button
-                id="moveDown"
-                class="bg-gray-200 hover:bg-gray-300 py-2 px-4 rounded"
-              >
-                ↓
-              </button>
-              <button
-                id="moveRight"
-                class="bg-gray-200 hover:bg-gray-300 py-2 px-4 rounded"
-              >
-                →
-              </button>
-            </div>
-            <div class="flex justify-center space-x-2">
-              <button
-                id="zoomOut"
-                class="bg-gray-200 hover:bg-gray-300 py-2 px-4 rounded"
-              >
-                -
-              </button>
-              <button
-                id="zoomIn"
-                class="bg-gray-200 hover:bg-gray-300 py-2 px-4 rounded"
-              >
-                +
-              </button>
-            </div>
-          </div>
-        </section>
-      </div>
-
-      <section class="bg-white rounded-lg shadow-md p-6 mt-8">
-        <h2 class="text-2xl font-semibold mb-4">Price List</h2>
-        <div id="priceTable" class="overflow-x-auto">
-          <!-- The price table will be dynamically generated and inserted here by the server -->
+          </section>
         </div>
-      </section>
+
+        <div class="flex-1">
+          <section id="fileRobot" class="bg-white rounded-lg shadow-md p-6 mb-8">
+            <h2 class="text-2xl font-semibold mb-4">File Robot Image Editor</h2>
+            <button id="openEditorButton" class="bg-blue-500 text-white px-4 py-2 rounded mb-4">Open Image Editor</button>
+            <div id="filerobot-editor-container" style="width: 100%; height: 600px;"></div>
+          </section>
+
+          <section class="bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-2xl font-semibold mb-4">Price List</h2>
+            <div id="priceTable" class="overflow-x-auto">
+              <!-- The price table will be dynamically generated and inserted here by the server -->
+            </div>
+          </section>
+        </div>
+      </div>
     </main>
 
     <footer class="bg-gray-800 text-white text-center py-4 mt-8">
@@ -275,6 +285,8 @@
     </footer>
     <script src="/script.js"></script>
     <script src="/sticker.js"></script>
+    <script src="https://scaleflex.cloudimg.io/v7/plugins/filerobot-image-editor/latest/filerobot-image-editor.min.js" async></script>
+    <script src="/filerobot.js"></script>
     <script>
       const dropzone = document.getElementById("dropzone");
       const fileInput = document.getElementById("image");

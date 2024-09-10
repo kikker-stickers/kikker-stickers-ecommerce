@@ -154,6 +154,9 @@ app.post("/upload-sticker", async (req, res) => {
 
 app.use(express.static(path.join(__dirname, "client")));
 
+// Add this line to serve Filerobot Image Editor files
+app.use('/filerobot-image-editor', express.static(path.join(__dirname, 'node_modules/filerobot-image-editor/dist')));
+
 const port = process.env.PORT || 8081;
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
