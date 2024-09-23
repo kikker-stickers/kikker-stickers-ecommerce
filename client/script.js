@@ -116,6 +116,7 @@ function updateQuantityOptions() {
   let uniqueQuantities = [];
 
   if (shape && size) {
+    quantitySelect.disabled = false;
     // Get all unique quantities from allPrices for the selected shape and size
     uniqueQuantities = [...new Set(allPrices
       .filter(item => item.shape === shape && formatSize(item.width, item.height) === size)
@@ -136,6 +137,8 @@ function updateQuantityOptions() {
     if (uniqueQuantities.includes(parseInt(currentQuantity))) {
       quantitySelect.value = currentQuantity;
     }
+  } else {
+    quantitySelect.disabled = true;
   }
 
   console.log("Quantity options updated:", {

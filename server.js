@@ -63,7 +63,7 @@ function generatePriceTable(prices) {
               class="snipcart-add-item"
               data-item-id="${item.id}"
               data-item-price="${item.price.toFixed(2)}"
-              data-item-url="https://kikker-stickers.github.io/kikker-stickers-ecommerce"
+              data-item-url="https://kikkerstickers.com/create-decal/"
               data-item-description="${item.width} x ${item.height} ${
         item.shape
       } sticker, quantity: ${item.quantity}"
