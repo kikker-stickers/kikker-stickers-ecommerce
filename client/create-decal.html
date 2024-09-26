@@ -173,26 +173,29 @@
         Snipcart.api.theme.cart.open();
       });
 
-    // Add this event listener to prevent default action on the anchor tag
-    document
-      .querySelector("#cart-summary a")
-      .addEventListener("click", function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        Snipcart.api.theme.cart.open();
-      });
-  </script>
-  <script async src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js"></script>
-  <div hidden id="snipcart" data-api-key="YTdlNzRkM2MtMmFjOS00NzUzLWExYjItNTVkMTQ2N2U5N2M4NjM4NTk3Njc5MTc5NDY3OTQ3"></div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html-to-image/1.11.11/html-to-image.min.js"></script>
-  <script>
-    // Load header and footer
-    function loadHeaderFooter() {
-      fetch("header-nav.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("header-placeholder").innerHTML = data;
+      // Add this event listener to prevent default action on the anchor tag
+      document
+        .querySelector("#cart-summary a")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          Snipcart.api.theme.cart.open();
         });
+    </script>
+    <script
+      async
+      src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js"
+    ></script>
+    <div id="snipcart-script-placeholder"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html-to-image/1.11.11/html-to-image.min.js"></script>
+    <script>
+      // Load header and footer
+      function loadHeaderFooter() {
+        fetch("header-nav.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("header-placeholder").innerHTML = data;
+          });
 
       fetch("footer.html")
         .then((response) => response.text())
@@ -201,8 +204,7 @@
         });
     }
 
-    document.addEventListener("DOMContentLoaded", loadHeaderFooter);
-  </script>
-</body>
-
+      document.addEventListener("DOMContentLoaded", loadHeaderFooter);
+    </script>
+  </body>
 </html>

@@ -3,6 +3,9 @@ const path = require("path");
 const cloudinary = require("cloudinary").v2;
 const cors = require("cors");
 const fs = require("fs");
+const dotenv = require("dotenv");
+
+dotenv.config();
 
 const app = express();
 app.use(cors());
@@ -13,13 +16,15 @@ app.use(express.urlencoded({ limit: "50mb", extended: true }));
 app.use(express.static(path.join(__dirname, "client")));
 
 // Handle favicon requests
-app.get('/favicon.ico', (req, res) => res.status(204)); // Respond with no content
+app.get("/favicon.ico", (req, res) => res.status(204)); // Respond with no content
 
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
   api_key: process.env.CLOUDINARY_API_KEY,
   api_secret: process.env.CLOUDINARY_API_SECRET,
 });
+
+const snipcart_api_key = process.env.SNIPCART_API_KEY;
 
 function generatePriceTable(prices) {
   if (!Array.isArray(prices) || prices.length === 0) {
@@ -101,12 +106,11 @@ app.get("/", (req, res) => {
 });
 
 app.get("/create-decal", (req, res) => {
-  // Serve the index page at the '/create-decal' endpoint
   res.setHeader("Cache-Control", "no-store, max-age=0");
-  const indexPath = path.join(__dirname, "client", "create-decal.html");
+  const decalPagePath = path.join(__dirname, "client", "create-decal.html");
   const pricesPath = path.join(__dirname, "client", "prices.json");
 
-  fs.readFile(indexPath, "utf8", (err, html) => {
+  fs.readFile(decalPagePath, "utf8", (err, html) => {
     if (err) {
       console.error("Error reading index file:", err);
       return res.status(500).send("Error reading index file");
@@ -146,7 +150,22 @@ app.get("/create-decal", (req, res) => {
         return res.status(500).send("Error updating price table");
       }
 
-      res.send(updatedHtml);
+      const snipcartScriptRegex =
+        /<div id="snipcart-script-placeholder"[^>]*>[\s\S]*?<\/div>/;
+
+      const snipcartScriptMatch = updatedHtml.match(snipcartScriptRegex);
+
+      if (!snipcartScriptMatch) {
+        console.error("Snipcart script placeholder not found in HTML");
+        return res.status(500).send("Error updating Snipcart script");
+      }
+
+      const snipcartUpdatedHtml = updatedHtml.replace(
+        snipcartScriptRegex,
+        `<div hidden id="snipcart" data-api-key="${snipcart_api_key}"></div>`
+      );
+
+      res.send(snipcartUpdatedHtml);
     });
   });
 });

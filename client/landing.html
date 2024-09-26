@@ -1,93 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="font-poppins bg-white">
+    <div id="header-placeholder">
+      <!-- Placeholder for header -->
+    </div>
 
-<head>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="/styles.css" />
-  <title>Kikker Stickers - Create Order</title>
-</head>
-
-<body class="font-poppins bg-white">
-  <div id="header-placeholder">
-    <!-- Placeholder for header -->
-  </div>
-  <div class="container mx-auto p-5">
-    <section class="flex flex-wrap justify-center">
-      <div class="w-full sm:w-1/2 lg:w-1/3 p-4">
-        <img src="https://via.placeholder.com/300x200" alt="Sticker Example" class="rounded-lg shadow-md mb-4 border-b-4 border-secondary" />
-        <h2 class="text-xl font-semibold cl-brown">Custom Stickers</h2>
-        <p class="cl-brown"> Create your own unique stickers with our easy online tool. </p>
-      </div>
-      <div class="w-full sm:w-1/2 lg:w-1/3 p-4">
-        <img src="https://via.placeholder.com/300x200" alt="Sticker Example" class="rounded-lg shadow-md mb-4 border-b-4 border-secondary" />
-        <h2 class="text-xl font-semibold cl-brown">Quality Materials</h2>
-        <p class="cl-brown"> We use durable, water-resistant vinyl to ensure your stickers stand up to the elements. </p>
-      </div>
-      <div class="w-full sm:w-1/2 lg:w-1/3 p-4">
-        <img src="https://via.placeholder.com/300x200" alt="Sticker Example" class="rounded-lg shadow-md mb-4 border-b-4 border-secondary" />
-        <h2 class="text-xl font-semibold cl-brown">Fast Shipping</h2>
-        <p class="cl-brown"> Get your stickers delivered to your door within 4 business days! </p>
-      </div>
-    </section>
-    <section class="mt-10">
-      <h2 class="text-2xl font-bold text-center text-gray-800 mb-5"> Benefits for Merchants </h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="bg-gray-100 p-5 rounded-lg shadow-md">
-          <h3 class="text-xl font-semibold text-gray-800"> Boosts Brand Visibility </h3>
-          <p class="text-gray-600"> Including stickers with your logo in orders enhances brand recognition when customers share and display them. </p>
+    <div class="container mx-auto p-5">
+      <section class="flex flex-col items-center justify-center mb-4">
+        <h1 class="text-3xl font-bold text-center py-6">
+          Are you in need of some stickers?
+        </h1>
+        <a href="/create-decal">
+          <div
+            class="bg-green text-white pb-0 px-4 rounded text-center flex items-center justify-center h-12"
+          >
+            We've got you covered!
+          </div>
+        </a>
+      </section>
+      <section class="flex flex-wrap justify-center">
+        <div class="w-full sm:w-1/2 lg:w-1/3 p-4">
+          <img
+            src="custom_stickers.webp"
+            alt="Sticker Example"
+            class="rounded-lg shadow-md mb-4 border-b-4 border-secondary"
+          />
+          <h2 class="text-xl font-semibold">Custom Designs</h2>
+          <p>Create your own unique stickers with our easy online tool.</p>
         </div>
-        <div class="bg-gray-100 p-5 rounded-lg shadow-md">
-          <h3 class="text-xl font-semibold text-gray-800"> Increases Customer Loyalty </h3>
-          <p class="text-gray-600"> Gifting customers with stickers creates a sense of appreciation and connection, fostering loyalty. </p>
+        <div class="w-full sm:w-1/2 lg:w-1/3 p-4">
+          <img
+            src="quality_materials.webp"
+            alt="Sticker Example"
+            class="rounded-lg shadow-md mb-4 border-b-4 border-secondary"
+          />
+          <h2 class="text-xl font-semibold">Quality Materials</h2>
+          <p>
+            We use durable, water-resistant materials to ensure your stickers
+            last.
+          </p>
         </div>
-        <div class="bg-gray-100 p-5 rounded-lg shadow-md">
-          <h3 class="text-xl font-semibold text-gray-800"> Affordable Marketing Tool </h3>
-          <p class="text-gray-600"> Stickers provide a cost-effective way to promote your brand without the high costs of traditional advertising. </p>
+        <div class="w-full sm:w-1/2 lg:w-1/3 p-4">
+          <img
+            src="fast_shipping.webp"
+            alt="Sticker Example"
+            class="rounded-lg shadow-md mb-4 border-b-4 border-secondary"
+          />
+          <h2 class="text-xl font-semibold">Fast Shipping</h2>
+          <p>Get your stickers delivered to your door within days!</p>
         </div>
-        <div class="bg-gray-100 p-5 rounded-lg shadow-md">
-          <h3 class="text-xl font-semibold text-gray-800"> Versatile Promotion </h3>
-          <p class="text-gray-600"> Stickers can be used on various surfaces, giving your logo more exposure in diverse environments. </p>
+      </section>
+      <section class="mt-10">
+        <h2 class="text-2xl font-bold text-center text-gray-800 mb-5">
+          Benefits for Merchants
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-gray-100 p-5 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold text-gray-800">
+              Boosts Brand Visibility
+            </h3>
+            <p class="text-gray-600">
+              Including stickers with your logo in orders can enhance brand
+              recognition as customers share and display them.
+            </p>
+          </div>
+          <div class="bg-gray-100 p-5 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold text-gray-800">
+              Increases Customer Loyalty
+            </h3>
+            <p class="text-gray-600">
+              Gifting customers with stickers can create a sense of appreciation
+              and connection, fostering loyalty.
+            </p>
+          </div>
+          <div class="bg-gray-100 p-5 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold text-gray-800">
+              Affordable Marketing Tool
+            </h3>
+            <p class="text-gray-600">
+              Stickers provide a cost-effective way to promote your brand
+              without the high costs of traditional advertising.
+            </p>
+          </div>
+          <div class="bg-gray-100 p-5 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold text-gray-800">
+              Versatile Promotion
+            </h3>
+            <p class="text-gray-600">
+              Stickers can be used on various surfaces, giving your logo more
+              exposure in diverse environments.
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
-    <section class="mt-10">
-      <h2 class="text-2xl font-bold text-center text-gray-800 mb-5"> Customer Testimonials </h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-gray-100 p-5 rounded-lg shadow-md">
-          <p class="text-gray-700"> "I love my Kikker Stickers! They are high quality and really stand out!" </p>
-          <p class="text-right text-gray-600">- Ben Kuiper</p>
+      </section>
+      <section class="mt-10">
+        <h2 class="text-2xl font-bold text-center text-gray-800 mb-5">
+          Customer Testimonials
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-gray-100 p-5 rounded-lg shadow-md">
+            <p class="text-gray-700">
+              "I love my Kikker Stickers! They are high quality and really stand
+              out!"
+            </p>
+            <p class="text-right text-gray-600">- Jamie L.</p>
+          </div>
+          <div class="bg-gray-100 p-5 rounded-lg shadow-md">
+            <p class="text-gray-700">
+              "Fantastic service and my custom design turned out better than I
+              expected!"
+            </p>
+            <p class="text-right text-gray-600">- Alex R.</p>
+          </div>
+          <div class="bg-gray-100 p-5 rounded-lg shadow-md">
+            <p class="text-gray-700">
+              "Fast shipping and excellent quality. I'll definitely be ordering
+              again!"
+            </p>
+            <p class="text-right text-gray-600">- Sam W.</p>
+          </div>
         </div>
-        <div class="bg-gray-100 p-5 rounded-lg shadow-md">
-          <p class="text-gray-700"> "Fantastic service and my custom design turned out better than I expected!" </p>
-          <p class="text-right text-gray-600">- Dr. Fernando</p>
+      </section>
+      <section class="mt-10">
+        <h2 class="text-2xl font-bold text-center text-gray-800 mb-5">
+          Frequently Asked Questions (FAQ)
+        </h2>
+        <div class="flex flex-col space-y-6">
+          <div class="bg-gray-100 p-5 rounded-lg shadow-md">
+            <h3 class="font-semibold text-gray-800">
+              What materials are used for the stickers?
+            </h3>
+            <p class="text-gray-600">
+              Our stickers are made from high-quality, durable, and
+              water-resistant materials to ensure longevity.
+            </p>
+          </div>
+          <div class="bg-gray-100 p-5 rounded-lg shadow-md">
+            <h3 class="font-semibold text-gray-800">
+              Can I create custom designs?
+            </h3>
+            <p class="text-gray-600">
+              Yes! Our online design tool allows you to create unique stickers
+              tailored to your preferences.
+            </p>
+          </div>
+          <div class="bg-gray-100 p-5 rounded-lg shadow-md">
+            <h3 class="font-semibold text-gray-800">
+              How long does shipping take?
+            </h3>
+            <p class="text-gray-600">
+              We aim to deliver your stickers within a few days, depending on
+              your location.
+            </p>
+          </div>
+          <div class="bg-gray-100 p-5 rounded-lg shadow-md">
+            <h3 class="font-semibold text-gray-800">
+              Do you offer bulk discounts?
+            </h3>
+            <p class="text-gray-600">
+              Yes, we offer discounts on bulk orders! Please contact us for more
+              details.
+            </p>
+          </div>
         </div>
-        <div class="bg-gray-100 p-5 rounded-lg shadow-md">
-          <p class="text-gray-700"> "Fast shipping and excellent quality. I'll definitely be ordering again!" </p>
-          <p class="text-right text-gray-600">- Bill Corner</p>
-        </div>
-      </div>
-    </section>
-    <section class="mt-10">
-      <h2 class="text-2xl font-bold text-center text-gray-800 mb-5"> Frequently Asked Questions (FAQ) </h2>
-      <div class="flex flex-col space-y-6">
-        <div class="bg-gray-100 p-5 rounded-lg shadow-md">
-          <h3 class="font-semibold text-gray-800"> What materials are used for the stickers? </h3>
-          <p class="text-gray-600"> Our stickers are made from high-quality, durable, and water-resistant vinyl to ensure longevity. </p>
-        </div>
-        <div class="bg-gray-100 p-5 rounded-lg shadow-md">
-          <h3 class="font-semibold text-gray-800"> Can I create custom designs? </h3>
-          <p class="text-gray-600"> Yes! Our online design tool allows you to upload your unique designs. </p>
-        </div>
-        <div class="bg-gray-100 p-5 rounded-lg shadow-md">
-          <h3 class="font-semibold text-gray-800"> How long does shipping take? </h3>
-          <p class="text-gray-600"> Once processed, shipping typically takes 4 business days. </p>
-        </div>
-        <div class="bg-gray-100 p-5 rounded-lg shadow-md">
-          <h3 class="font-semibold text-gray-800"> Do you offer bulk discounts? </h3>
-          <p class="text-gray-600"> Yes, we offer discounts on bulk orders! Please contact us for more details. </p>
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
     <div id="footer-placeholder"></div>
   </div>
   <script>
