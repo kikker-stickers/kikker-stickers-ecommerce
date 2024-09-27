@@ -98,7 +98,7 @@ function updateSizeOptions() {
   console.log("Size options updated:", {
     shape: shape,
     availableSizes: sizes,
-    selectedSize: sizeSelect.value
+    selectedSize: sizeSelect.value,
   });
 
   updateQuantityOptions();
@@ -120,9 +120,17 @@ function updateQuantityOptions() {
     quantityHelpText.classList.add("hidden");
     quantitySelect.disabled = false;
     // Get all unique quantities from allPrices for the selected shape and size
-    uniqueQuantities = [...new Set(allPrices
-      .filter(item => item.shape === shape && formatSize(item.width, item.height) === size)
-      .map(item => item.quantity))];
+    uniqueQuantities = [
+      ...new Set(
+        allPrices
+          .filter(
+            (item) =>
+              item.shape === shape &&
+              formatSize(item.width, item.height) === size
+          )
+          .map((item) => item.quantity)
+      ),
+    ];
 
     // Sort quantities in ascending order
     uniqueQuantities.sort((a, b) => a - b);
@@ -148,7 +156,7 @@ function updateQuantityOptions() {
     shape: shape,
     size: size,
     availableQuantities: uniqueQuantities,
-    selectedQuantity: quantitySelect.value
+    selectedQuantity: quantitySelect.value,
   });
 }
 
@@ -170,7 +178,11 @@ function updatePriceDisplay() {
     if (priceData) {
       document.getElementById(
         "priceDisplay"
-      ).innerHTML = `Price: $${priceData.price.toFixed(2)} <span class="float-right text-green-600">($${(priceData.price / priceData.quantity).toFixed(2)} each)</span>`;
+      ).innerHTML = `Price: $${priceData.price.toFixed(
+        2
+      )} <span class="float-right text-green-600">($${(
+        priceData.price / priceData.quantity
+      ).toFixed(2)} each)</span>`;
     } else {
       document.getElementById("priceDisplay").textContent =
         "Price not available";
@@ -183,7 +195,7 @@ function updatePriceDisplay() {
     shape: shape,
     size: size,
     quantity: quantity,
-    price: priceData ? priceData.price : null
+    price: priceData ? priceData.price : null,
   });
 }
 
@@ -252,7 +264,7 @@ function handleSubmit(event) {
     if (priceData) {
       console.log("Price data found:", priceData);
       window.showSpinner();
-      captureAndUploadSticker()
+      uploadSticker()
         .then((cloudinaryUrl) => {
           console.log("Sticker captured and uploaded:", cloudinaryUrl);
           return Snipcart.api.cart.items.add({
@@ -400,7 +412,7 @@ function updateCartSummary() {
             <span id="cart-items-header" class="snipcart-items-count">${state.cart.items.count}</span>
           </div>
         </a>
-        `
+        `;
       }
     });
   }
@@ -430,55 +442,50 @@ function extractPriceDataFromTable() {
   updateForm(); // Call updateForm after extracting price data
 }
 
-function captureAndUploadSticker() {
-  console.log("Starting sticker capture and upload process");
-  const stickerDisplay = document.getElementById("stickerDisplay");
-  const uploadedImage = document.getElementById("uploadedImage");
+function uploadSticker() {
+  console.log("Starting sticker upload process");
+  const fileInput = document.getElementById("image");
 
-  if (!stickerDisplay || !uploadedImage) {
-    console.error("Sticker display or uploaded image element not found");
-    return Promise.reject("Required elements not found");
+  if (!fileInput || !fileInput.files.length) {
+    console.error("No file selected for upload");
+    return Promise.reject("No file selected");
   }
 
-  console.log("Current sticker display state:", {
-    position: imagePosition,
-    scale: imageScale,
-    clipPath: stickerDisplay.style.clipPath,
-    imageTransform: uploadedImage.style.transform
-  });
+  const file = fileInput.files[0];
+  console.log("Uploading file:", file.name);
 
   return new Promise((resolve, reject) => {
-    console.log("Capturing sticker as PNG");
-    htmlToImage.toPng(stickerDisplay, {
-      backgroundColor: null,
-      pixelRatio: 1,
-      quality: 1,
-      skipFonts: true,
-      fontEmbedCSS: '',
-      imagePlaceholder: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACklEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg==',
-      filter: (node) => {
-        // Include only the stickerDisplay and its children
-        return node === stickerDisplay || stickerDisplay.contains(node);
-      }
-    })
-    .then(function (dataUrl) {
-      console.log("Sticker captured successfully, uploading to server");
-      return fetch("/upload-sticker", {
+    const formData = new FormData();
+    formData.append("image", file);
+
+    //convert file to base64
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = function (e) {
+      const dataUrl = e.target.result;
+      console.log("File converted to base64:", dataUrl);
+
+      fetch("/upload-sticker", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ imageBase64: dataUrl }),
-      });
-    })
-    .then((response) => response.json())
-    .then((data) => {
-      console.log("Sticker uploaded successfully:", data.imageUrl);
-      resolve(data.imageUrl);
-    })
-    .catch(function (error) {
-      console.error("Error capturing or uploading sticker:", error);
-      reject(error);
-    });
+      })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          return response.json();
+        })
+        .then((data) => {
+          console.log("Sticker uploaded successfully:", data.imageUrl);
+          resolve(data.imageUrl);
+        })
+        .catch((error) => {
+          console.error("Error uploading sticker:", error);
+          reject(error);
+        });
+    };
   });
 }

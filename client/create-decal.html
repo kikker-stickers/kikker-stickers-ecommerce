@@ -1,96 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kikker Stickers - Custom Decals</title>
+    <link rel="icon" href="data:," />
+    <link
+      rel="stylesheet"
+      href="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kikker Stickers - Custom Decals</title>
-  <link rel="icon" href="data:," />
-  <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.css" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="/styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
-</head>
+  <body class="bg-gray-100 text-gray-800 font-sans">
+    <div id="header-placeholder">
+      <!-- Placeholder for header -->
+    </div>
 
-<body class="bg-gray-100 text-gray-800 font-sans">
-  <div id="header-placeholder">
-    <!-- Placeholder for header -->
-  </div>
-  
-  <main style="max-width: 800px;" class="mx-auto px-4 py-8 min-h-screen">
-    <div class="flex flex-row">
-      <section class="bg-white rounded-lg shadow-md p-6 flex-grow">
-        <h2 class="text-2xl font-semibold mb-4"> Create Your Custom Sticker </h2>
-        <form id="orderForm" class="space-y-4">
-          <div id="imageUploadGroup" class="mb-4">
-            <label for="image" class="block font-medium mb-2">Upload Image</label>
-            <div class="relative">
-              <input type="file" id="image" name="image" accept="image/*" class="hidden" />
-              <div id="dropzone" class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center cursor-pointer hover:border-primary transition duration-300">
-                <div class="mb-4">
-                  <i class="fas fa-cloud-upload-alt text-4xl text-gray-400"></i>
+    <main style="max-width: 800px" class="mx-auto px-4 py-8 min-h-screen">
+      <div class="flex flex-row">
+        <section class="bg-white rounded-lg shadow-md p-6 flex-grow">
+          <h2 class="text-2xl font-semibold mb-4">
+            Create Your Custom Sticker
+          </h2>
+          <form id="orderForm" class="space-y-4">
+            <div id="imageUploadGroup" class="mb-4">
+              <label for="image" class="block font-medium mb-2"
+                >Upload Image</label
+              >
+              <div class="relative">
+                <input
+                  type="file"
+                  id="image"
+                  name="image"
+                  accept="image/*"
+                  class="hidden"
+                />
+                <div
+                  id="dropzone"
+                  class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center cursor-pointer hover:border-primary transition duration-300"
+                >
+                  <div class="mb-4">
+                    <i
+                      class="fas fa-cloud-upload-alt text-4xl text-gray-400"
+                    ></i>
+                  </div>
+                  <p class="text-gray-600 mb-2">
+                    Drag and drop your image here
+                  </p>
+                  <p class="text-gray-500 text-sm">or</p>
+                  <button
+                    type="button"
+                    class="mt-2 bg-green hover:bg-green-700 text-white font-semibold py-2 px-4 rounded transition duration-300"
+                  >
+                    Choose File
+                  </button>
+                  <p id="file-name" class="mt-2 text-sm text-gray-500"></p>
                 </div>
-                <p class="text-gray-600 mb-2"> Drag and drop your image here </p>
-                <p class="text-gray-500 text-sm">or</p>
-                <button type="button" class="mt-2 bg-green hover:bg-green-700 text-white font-semibold py-2 px-4 rounded transition duration-300"> Choose File </button>
-                <p id="file-name" class="mt-2 text-sm text-gray-500"></p>
               </div>
             </div>
-          </div>
-          <div id="shapeGroup" class="relative">
-            <label for="shape" class="block font-medium mb-1">Shape</label>
-            <select id="shape" name="shape" class="w-full border border-gray-300 rounded px-3 py-2 appearance-none bg-white pr-8 cursor-pointer hover:cursor-pointer">
-              <option value="">Select a shape</option>
-              <option value="Circle">Circle</option>
-              <option value="Square">Square</option>
-              <option value="Oval">Oval</option>
-              <option value="Rectangle">Rectangle</option>
-            </select>
-            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700" style="top: 24px">
-              <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-              </svg>
+            <div id="shapeGroup" class="relative">
+              <label for="shape" class="block font-medium mb-1">Shape</label>
+              <select
+                id="shape"
+                name="shape"
+                class="w-full border border-gray-300 rounded px-3 py-2 appearance-none bg-white pr-8 cursor-pointer hover:cursor-pointer"
+              >
+                <option value="">Select a shape</option>
+                <option value="Circle">Circle</option>
+                <option value="Square">Square</option>
+                <option value="Oval">Oval</option>
+                <option value="Rectangle">Rectangle</option>
+              </select>
+              <div
+                class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+                style="top: 24px"
+              >
+                <svg
+                  class="fill-current h-4 w-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                  />
+                </svg>
+              </div>
             </div>
-          </div>
-          <div id="sizeGroup" class="relative">
-            <label for="size" class="block font-medium mb-1">Size</label>
-            <select id="size" name="size" class="w-full border border-gray-300 rounded px-3 py-2 appearance-none bg-white pr-8 cursor-pointer hover:cursor-pointer disabled:bg-gray-100 disabled:text-gray-400 disabled:cursor-not-allowed">
-              <option value="">Select a size</option>
-              <!-- Options will be dynamically populated -->
-            </select>
-            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700" style="top: 24px">
-              <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-              </svg>
+            <div id="sizeGroup" class="relative">
+              <label for="size" class="block font-medium mb-1">Size</label>
+              <select
+                id="size"
+                name="size"
+                class="w-full border border-gray-300 rounded px-3 py-2 appearance-none bg-white pr-8 cursor-pointer hover:cursor-pointer disabled:bg-gray-100 disabled:text-gray-400 disabled:cursor-not-allowed"
+              >
+                <option value="">Select a size</option>
+                <!-- Options will be dynamically populated -->
+              </select>
+              <div
+                class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+                style="top: 24px"
+              >
+                <svg
+                  class="fill-current h-4 w-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                  />
+                </svg>
+              </div>
+              <p id="sizeHelpText" class="text-sm text-gray-500 mt-1 hidden">
+                Please select a shape first
+              </p>
             </div>
-            <p id="sizeHelpText" class="text-sm text-gray-500 mt-1 hidden"> Please select a shape first </p>
-          </div>
-          <div id="quantityGroup" class="relative">
-            <label for="quantity" class="block font-medium mb-1">Quantity</label>
-            <select id="quantity" name="quantity" class="w-full border border-gray-300 rounded px-3 py-2 appearance-none bg-white pr-8 cursor-pointer hover:cursor-pointer disabled:bg-gray-100 disabled:text-gray-400 disabled:cursor-not-allowed">
-              <option value="">Select a quantity</option>
-              <!-- Options will be dynamically populated -->
-            </select>
-            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700" style="top: 24px">
-              <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-              </svg>
+            <div id="quantityGroup" class="relative">
+              <label for="quantity" class="block font-medium mb-1"
+                >Quantity</label
+              >
+              <select
+                id="quantity"
+                name="quantity"
+                class="w-full border border-gray-300 rounded px-3 py-2 appearance-none bg-white pr-8 cursor-pointer hover:cursor-pointer disabled:bg-gray-100 disabled:text-gray-400 disabled:cursor-not-allowed"
+              >
+                <option value="">Select a quantity</option>
+                <!-- Options will be dynamically populated -->
+              </select>
+              <div
+                class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+                style="top: 24px"
+              >
+                <svg
+                  class="fill-current h-4 w-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                  />
+                </svg>
+              </div>
+              <p
+                id="quantityHelpText"
+                class="text-sm text-gray-500 mt-1 hidden"
+              >
+                Please select a size first
+              </p>
             </div>
-            <p id="quantityHelpText" class="text-sm text-gray-500 mt-1 hidden"> Please select a size first </p>
-          </div>
-          <div id="priceDisplay" class="text-xl font-bold">Price: -</div>
-          <div class="flex items-center justify-between gap-8">
-            <button id="addToCart" type="submit" class="bg-green text-white py-2 px-4 rounded hover:bg-green-700  transition duration-300"> Add to cart </button>
-            <div id="cart-summary" class="bg-gray-200 py-2 px-4 rounded hover:bg-gray-300 cursor-pointer flex justify-center">
-              <a class="snipcart-checkout">
-                <i id="cart-icon" class="fas fa-shopping-cart"></i>
-                <span id="cart-items" class="snipcart-items-count">0</span> items - <span id="cart-total" class="snipcart-total-price">$0.00</span>
-              </a>
+            <div id="priceDisplay" class="text-xl font-bold">Price: -</div>
+            <div class="flex items-center justify-between gap-8">
+              <button
+                id="addToCart"
+                type="submit"
+                class="bg-green text-white py-2 px-4 rounded hover:bg-green-700 transition duration-300"
+              >
+                Add to cart
+              </button>
+              <div
+                id="cart-summary"
+                class="bg-gray-200 py-2 px-4 rounded hover:bg-gray-300 cursor-pointer flex justify-center"
+              >
+                <a class="snipcart-checkout">
+                  <i id="cart-icon" class="fas fa-shopping-cart"></i>
+                  <span id="cart-items" class="snipcart-items-count">0</span>
+                  items -
+                  <span id="cart-total" class="snipcart-total-price"
+                    >$0.00</span
+                  >
+                </a>
+              </div>
             </div>
-          </div>
-        </form>
-      </section>
-      <!-- <section class="bg-white rounded-lg shadow-md p-6 flex-1 hidden">
+          </form>
+        </section>
+        <!-- <section class="bg-white rounded-lg shadow-md p-6 flex-1 hidden">
         <h2 class="text-2xl font-semibold mb-4">Sticker Preview</h2>
         <div class="border rounded-lg p-4 my-4 flex justify-center items-center">
           <div id="stickerDisplay" class="w-full max-w-sm aspect-square relative overflow-hidden">
@@ -110,72 +198,72 @@
           </div>
         </div>
       </section> -->
-    </div>
-    <section class="bg-white rounded-lg shadow-md p-6 mt-8 hidden">
-      <h2 class="text-2xl font-semibold mb-4">Price List</h2>
-      <div id="priceTable" class="overflow-x-auto">
-        <!-- The price table will be dynamically generated and inserted here by the server -->
       </div>
-    </section>
-  </main>
-  <div id="footer-placeholder">
-    <!-- Placeholder for footer -->
-  </div>
-  <script src="/script.js"></script>
-  <script src="/sticker.js"></script>
-  <script>
-    const dropzone = document.getElementById("dropzone");
-    const fileInput = document.getElementById("image");
-    const fileName = document.getElementById("file-name");
-    const uploadedImage = document.getElementById("uploadedImage");
+      <section class="bg-white rounded-lg shadow-md p-6 mt-8 hidden">
+        <h2 class="text-2xl font-semibold mb-4">Price List</h2>
+        <div id="priceTable" class="overflow-x-auto">
+          <!-- The price table will be dynamically generated and inserted here by the server -->
+        </div>
+      </section>
+    </main>
+    <div id="footer-placeholder">
+      <!-- Placeholder for footer -->
+    </div>
+    <script src="/script.js"></script>
+    <script src="/sticker.js"></script>
+    <script>
+      const dropzone = document.getElementById("dropzone");
+      const fileInput = document.getElementById("image");
+      const fileName = document.getElementById("file-name");
+      const uploadedImage = document.getElementById("uploadedImage");
 
-    dropzone.addEventListener("click", () => fileInput.click());
+      dropzone.addEventListener("click", () => fileInput.click());
 
-    dropzone.addEventListener("dragover", (e) => {
-      e.preventDefault();
-      dropzone.classList.add("border-primary");
-    });
-
-    dropzone.addEventListener("dragleave", () => {
-      dropzone.classList.remove("border-primary");
-    });
-
-    dropzone.addEventListener("drop", (e) => {
-      e.preventDefault();
-      dropzone.classList.remove("border-primary");
-      fileInput.files = e.dataTransfer.files;
-      updateFileInfo();
-    });
-
-    fileInput.addEventListener("change", updateFileInfo);
-
-    function updateFileInfo() {
-      const file = fileInput.files[0];
-      if (file) {
-        fileName.textContent = file.name;
-        updateImagePreview(file);
-      } else {
-        fileName.textContent = "";
-        uploadedImage.src = "/placeholder.png";
-      }
-    }
-
-    function updateImagePreview(file) {
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        uploadedImage.src = e.target.result;
-      };
-      reader.readAsDataURL(file);
-    }
-
-    // Update this script to handle clicks on both the div and the anchor tag
-    document
-      .getElementById("cart-summary")
-      .addEventListener("click", function (e) {
+      dropzone.addEventListener("dragover", (e) => {
         e.preventDefault();
-        e.stopPropagation();
-        Snipcart.api.theme.cart.open();
+        dropzone.classList.add("border-primary");
       });
+
+      dropzone.addEventListener("dragleave", () => {
+        dropzone.classList.remove("border-primary");
+      });
+
+      dropzone.addEventListener("drop", (e) => {
+        e.preventDefault();
+        dropzone.classList.remove("border-primary");
+        fileInput.files = e.dataTransfer.files;
+        updateFileInfo();
+      });
+
+      fileInput.addEventListener("change", updateFileInfo);
+
+      function updateFileInfo() {
+        const file = fileInput.files[0];
+        if (file) {
+          fileName.textContent = file.name;
+          updateImagePreview(file);
+        } else {
+          fileName.textContent = "";
+          uploadedImage.src = "/placeholder.png";
+        }
+      }
+
+      function updateImagePreview(file) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          uploadedImage.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+
+      // Update this script to handle clicks on both the div and the anchor tag
+      document
+        .getElementById("cart-summary")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          Snipcart.api.theme.cart.open();
+        });
 
       // Add this event listener to prevent default action on the anchor tag
       document
@@ -191,7 +279,6 @@
       src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js"
     ></script>
     <div id="snipcart-script-placeholder"></div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html-to-image/1.11.11/html-to-image.min.js"></script>
     <script>
       // Load header and footer
       function loadHeaderFooter() {
@@ -201,12 +288,12 @@
             document.getElementById("header-placeholder").innerHTML = data;
           });
 
-      fetch("footer.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("footer-placeholder").innerHTML = data;
-        });
-    }
+        fetch("footer.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("footer-placeholder").innerHTML = data;
+          });
+      }
 
       document.addEventListener("DOMContentLoaded", loadHeaderFooter);
     </script>
