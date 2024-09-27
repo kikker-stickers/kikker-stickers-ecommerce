@@ -48,9 +48,7 @@ function formatSize(width, height) {
 }
 
 function updateForm() {
-  console.log("Updating form");
   if (allPrices.length === 0) {
-    console.warn("Price data not loaded yet. Skipping form update.");
     return;
   }
   updateSizeOptions();
@@ -94,12 +92,6 @@ function updateSizeOptions() {
     sizeSelect.disabled = true;
     sizeHelpText.classList.remove("hidden");
   }
-
-  console.log("Size options updated:", {
-    shape: shape,
-    availableSizes: sizes,
-    selectedSize: sizeSelect.value,
-  });
 
   updateQuantityOptions();
 }
@@ -151,13 +143,6 @@ function updateQuantityOptions() {
     quantityHelpText.classList.remove("hidden");
     quantitySelect.disabled = true;
   }
-
-  console.log("Quantity options updated:", {
-    shape: shape,
-    size: size,
-    availableQuantities: uniqueQuantities,
-    selectedQuantity: quantitySelect.value,
-  });
 }
 
 function updatePriceDisplay() {
@@ -190,13 +175,6 @@ function updatePriceDisplay() {
   } else {
     document.getElementById("priceDisplay").textContent = "";
   }
-
-  console.log("Price display updated:", {
-    shape: shape,
-    size: size,
-    quantity: quantity,
-    price: priceData ? priceData.price : null,
-  });
 }
 
 function showSpinner() {
@@ -215,7 +193,6 @@ function hideSpinner() {
 
 function handleSubmit(event) {
   event.preventDefault();
-  console.log("Submit handler triggered");
 
   document.querySelectorAll(".error-message").forEach((el) => el.remove());
 
@@ -246,13 +223,10 @@ function handleSubmit(event) {
   }
 
   if (isValid) {
-    console.log("Form is valid, proceeding with submission");
     const shape = shapeSelect.value;
     const size = sizeSelect.value;
     const quantity = parseInt(quantitySelect.value);
     const imageFile = imageInput.files[0];
-
-    console.log("Selected options:", { shape, size, quantity });
 
     const priceData = allPrices.find(
       (item) =>
@@ -262,11 +236,9 @@ function handleSubmit(event) {
     );
 
     if (priceData) {
-      console.log("Price data found:", priceData);
       window.showSpinner();
       uploadSticker()
         .then((cloudinaryUrl) => {
-          console.log("Sticker captured and uploaded:", cloudinaryUrl);
           return Snipcart.api.cart.items.add({
             id: priceData.id,
             name: `Custom ${shape} Sticker`,
@@ -295,21 +267,15 @@ function handleSubmit(event) {
           });
         })
         .then(() => {
-          console.log("Item added to cart successfully");
           updateCartSummary();
         })
         .catch((error) => {
-          console.error("Error adding item to cart:", error);
+          // Handle error
         })
         .finally(() => {
-          console.log("Cart addition process completed");
           window.hideSpinner();
         });
-    } else {
-      console.error("Price data not found for the selected options");
     }
-  } else {
-    console.log("Form validation failed");
   }
 }
 
@@ -317,7 +283,6 @@ function displayError(element, message) {
   const container =
     element.closest('div[id$="Group"]') || element.parentElement;
   if (!container) {
-    console.error("Error container not found for element:", element);
     return;
   }
   const existingError = container.querySelector(".error-message");
@@ -345,7 +310,6 @@ function validateInput(event) {
   const input = event.target;
   const container = input.closest('div[id$="Group"]') || input.parentElement;
   if (!container) {
-    console.error("Validation container not found for input:", input);
     return;
   }
   const errorMessage = container.querySelector(".error-message");
@@ -438,21 +402,17 @@ function extractPriceDataFromTable() {
     }
   });
 
-  console.log("Extracted price data:", allPrices);
   updateForm(); // Call updateForm after extracting price data
 }
 
 function uploadSticker() {
-  console.log("Starting sticker upload process");
   const fileInput = document.getElementById("image");
 
   if (!fileInput || !fileInput.files.length) {
-    console.error("No file selected for upload");
     return Promise.reject("No file selected");
   }
 
   const file = fileInput.files[0];
-  console.log("Uploading file:", file.name);
 
   return new Promise((resolve, reject) => {
     const formData = new FormData();
@@ -463,7 +423,6 @@ function uploadSticker() {
     reader.readAsDataURL(file);
     reader.onload = function (e) {
       const dataUrl = e.target.result;
-      console.log("File converted to base64:", dataUrl);
 
       fetch("/upload-sticker", {
         method: "POST",
@@ -479,11 +438,9 @@ function uploadSticker() {
           return response.json();
         })
         .then((data) => {
-          console.log("Sticker uploaded successfully:", data.imageUrl);
           resolve(data.imageUrl);
         })
         .catch((error) => {
-          console.error("Error uploading sticker:", error);
           reject(error);
         });
     };
