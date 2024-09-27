@@ -107,6 +107,7 @@ function updateSizeOptions() {
 function updateQuantityOptions() {
   const shape = document.getElementById("shape").value;
   const size = document.getElementById("size").value;
+  const quantityHelpText = document.getElementById("quantityHelpText");
   const quantitySelect = document.getElementById("quantity");
   const currentQuantity = quantitySelect.value;
 
@@ -116,6 +117,7 @@ function updateQuantityOptions() {
   let uniqueQuantities = [];
 
   if (shape && size) {
+    quantityHelpText.classList.add("hidden");
     quantitySelect.disabled = false;
     // Get all unique quantities from allPrices for the selected shape and size
     uniqueQuantities = [...new Set(allPrices
@@ -138,6 +140,7 @@ function updateQuantityOptions() {
       quantitySelect.value = currentQuantity;
     }
   } else {
+    quantityHelpText.classList.remove("hidden");
     quantitySelect.disabled = true;
   }
 
@@ -167,7 +170,7 @@ function updatePriceDisplay() {
     if (priceData) {
       document.getElementById(
         "priceDisplay"
-      ).textContent = `Price: $${priceData.price.toFixed(2)}`;
+      ).innerHTML = `Price: $${priceData.price.toFixed(2)} <span class="float-right text-green-600">($${(priceData.price / priceData.quantity).toFixed(2)} each)</span>`;
     } else {
       document.getElementById("priceDisplay").textContent =
         "Price not available";
@@ -377,6 +380,7 @@ function updateCartSummary() {
     Snipcart.store.subscribe(() => {
       const state = Snipcart.store.getState();
       const cartSummary = document.getElementById("cart-summary");
+      const cartSummaryHeader = document.getElementById("cart-summary-header");
       if (cartSummary) {
         cartSummary.innerHTML = `
           <a href="#" class="snipcart-checkout">
@@ -385,6 +389,18 @@ function updateCartSummary() {
             <span id="cart-total" class="snipcart-total-price">${state.cart.total}</span>
           </a>
         `;
+      }
+
+      if (cartSummaryHeader && state.cart.items.count > 0) {
+        cartSummaryHeader.classList.remove("hidden");
+        cartSummaryHeader.innerHTML = `
+        <a href="#" class="snipcart-checkout">
+          <div class="bg-white text-green-500 pb-0 px-4 rounded text-center flex items-center justify-center h-12 hover:bg-gray-100 transition duration-300 shadow-md">
+            <i id="cart-icon-header" class="fas fa-shopping-cart"></i>
+            <span id="cart-items-header" class="snipcart-items-count">${state.cart.items.count}</span>
+          </div>
+        </a>
+        `
       }
     });
   }

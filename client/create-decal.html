@@ -13,11 +13,13 @@
 </head>
 
 <body class="bg-gray-100 text-gray-800 font-sans">
-  <div id="header-placeholder"></div>
-  <!-- Placeholder for header -->
-  <main class="container mx-auto px-4 py-8">
-    <div class="flex flex-col lg:flex-row gap-8">
-      <section class="bg-white rounded-lg shadow-md p-6 flex-1">
+  <div id="header-placeholder">
+    <!-- Placeholder for header -->
+  </div>
+  
+  <main style="max-width: 800px;" class="mx-auto px-4 py-8 min-h-screen">
+    <div class="flex flex-row">
+      <section class="bg-white rounded-lg shadow-md p-6 flex-grow">
         <h2 class="text-2xl font-semibold mb-4"> Create Your Custom Sticker </h2>
         <form id="orderForm" class="space-y-4">
           <div id="imageUploadGroup" class="mb-4">
@@ -30,7 +32,7 @@
                 </div>
                 <p class="text-gray-600 mb-2"> Drag and drop your image here </p>
                 <p class="text-gray-500 text-sm">or</p>
-                <button type="button" class="mt-2 bg-green hover:bg-green-dark text-white font-semibold py-2 px-4 rounded transition duration-300"> Choose File </button>
+                <button type="button" class="mt-2 bg-green hover:bg-green-700 text-white font-semibold py-2 px-4 rounded transition duration-300"> Choose File </button>
                 <p id="file-name" class="mt-2 text-sm text-gray-500"></p>
               </div>
             </div>
@@ -74,10 +76,11 @@
                 <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
               </svg>
             </div>
+            <p id="quantityHelpText" class="text-sm text-gray-500 mt-1 hidden"> Please select a size first </p>
           </div>
-          <div id="priceDisplay" class="text-xl font-bold"></div>
+          <div id="priceDisplay" class="text-xl font-bold">Price: -</div>
           <div class="flex items-center justify-between gap-8">
-            <button id="addToCart" type="submit" class="bg-green text-white py-2 px-4 rounded hover:bg-green-dark"> Add to cart </button>
+            <button id="addToCart" type="submit" class="bg-green text-white py-2 px-4 rounded hover:bg-green-700  transition duration-300"> Add to cart </button>
             <div id="cart-summary" class="bg-gray-200 py-2 px-4 rounded hover:bg-gray-300 cursor-pointer flex justify-center">
               <a class="snipcart-checkout">
                 <i id="cart-icon" class="fas fa-shopping-cart"></i>
@@ -87,7 +90,7 @@
           </div>
         </form>
       </section>
-      <section class="bg-white rounded-lg shadow-md p-6 flex-1">
+      <!-- <section class="bg-white rounded-lg shadow-md p-6 flex-1 hidden">
         <h2 class="text-2xl font-semibold mb-4">Sticker Preview</h2>
         <div class="border rounded-lg p-4 my-4 flex justify-center items-center">
           <div id="stickerDisplay" class="w-full max-w-sm aspect-square relative overflow-hidden">
@@ -106,7 +109,7 @@
             <button id="zoomIn" class="bg-gray-200 hover:bg-gray-300 py-2 px-4 rounded"> + </button>
           </div>
         </div>
-      </section>
+      </section> -->
     </div>
     <section class="bg-white rounded-lg shadow-md p-6 mt-8 hidden">
       <h2 class="text-2xl font-semibold mb-4">Price List</h2>
@@ -115,8 +118,9 @@
       </div>
     </section>
   </main>
-  <div id="footer-placeholder"></div>
-  <!-- Placeholder for footer -->
+  <div id="footer-placeholder">
+    <!-- Placeholder for footer -->
+  </div>
   <script src="/script.js"></script>
   <script src="/sticker.js"></script>
   <script>
