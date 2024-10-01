@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png">
+    <link rel="manifest" href="/static/site.webmanifest">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
@@ -134,7 +139,7 @@
       <section class="mt-10 flex flex-col items-center justify-center mb-4">
         <div class="flex flex-row justify-center">
           <div>
-            <img src="/logo.png" alt="Kikker Sticker Logo" class="h-60" />
+            <img src="/logo.png" alt="Kikker Sticker Logo" width="240" height="240" />
           </div>
           <div class="flex flex-col justify-center align-middle mb-6">
             <h2 class="text-2xl font-bold text-center text-gray-800 mb-5">We're excited to work with you!</h2>
@@ -190,24 +195,27 @@
       </section>
     </div>
     <div id="footer-placeholder"></div>
-  <script>
-    // Load header and footer
-    function loadHeaderFooter() {
-      fetch("header-nav.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("header-placeholder").innerHTML = data;
-        });
+    <script src="/script.js"></script>
+    <script async src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js"></script>
+    <div id="snipcart-script-placeholder"></div>
+    <script>
+      // Load header and footer
+      function loadHeaderFooter() {
+        fetch("header-nav.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("header-placeholder").innerHTML = data;
+          });
 
-      fetch("footer.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("footer-placeholder").innerHTML = data;
-        });
-    }
+        fetch("footer.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("footer-placeholder").innerHTML = data;
+          });
+      }
 
-    document.addEventListener("DOMContentLoaded", loadHeaderFooter);
-  </script>
-</body>
+      document.addEventListener("DOMContentLoaded", loadHeaderFooter);
+    </script>
+  </body>
 
 </html>
