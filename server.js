@@ -15,8 +15,6 @@ app.use(express.urlencoded({ limit: "50mb", extended: true }));
 // Serve static files from the client directory
 app.use(express.static(path.join(__dirname, "client")));
 
-// Handle favicon requests
-app.get("/favicon.ico", (req, res) => res.status(204)); // Respond with no content
 
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
