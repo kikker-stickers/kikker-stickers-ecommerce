@@ -362,21 +362,14 @@ function updateCartSummary() {
           <a href="#" class="snipcart-checkout">
             <i id="cart-icon" class="fas fa-shopping-cart"></i>
             <span id="cart-items" class="snipcart-items-count">${state.cart.items.count}</span> items -
-            <span id="cart-total" class="snipcart-total-price">${state.cart.total}</span>
+            <span id="cart-total" class="snipcart-total-price">$${state.cart.total}</span>
           </a>
         `;
       }
 
       if (cartSummaryHeader && state.cart.items.count > 0) {
         cartSummaryHeader.classList.remove("hidden");
-        cartSummaryHeader.innerHTML = `
-        <a href="#" class="snipcart-checkout">
-          <div class="bg-white text-green-500 pb-0 px-4 rounded text-center flex items-center justify-center h-12 hover:bg-gray-100 transition duration-300 shadow-md">
-            <i id="cart-icon-header" class="fas fa-shopping-cart"></i>
-            <span id="cart-items-header" class="snipcart-items-count">${state.cart.items.count}</span>
-          </div>
-        </a>
-        `;
+        cartSummaryHeader.querySelector("#cart-items-header").textContent = state.cart.items.count;
       }
     });
   }
