@@ -69,11 +69,12 @@ function generatePriceTable(prices) {
               data-item-id="${item.id}"
               data-item-price="${item.price.toFixed(2)}"
               data-item-url="https://kikkerstickers.com/create-decal/"
+              data-item-stackable="always"
               data-item-description="${item.width} x ${item.height} ${
         item.shape
       } sticker, quantity: ${item.quantity}"
               data-item-image="placeholder.png"
-              data-item-name="Custom ${item.shape} Sticker"
+              data-item-name="${item.shape} Sticker"
               data-item-custom1-name="Shape"
               data-item-custom1-options="${item.shape}"
               data-item-custom2-name="Size"

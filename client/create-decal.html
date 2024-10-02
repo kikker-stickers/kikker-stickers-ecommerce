@@ -194,7 +194,7 @@
       const dropzone = document.getElementById("dropzone");
       const fileInput = document.getElementById("image");
       const fileName = document.getElementById("file-name");
-      const uploadedImage = document.getElementById("uploadedImage");
+      // const uploadedImage = document.getElementById("uploadedImage");
 
       dropzone.addEventListener("click", () => fileInput.click());
 
@@ -223,14 +223,14 @@
           updateImagePreview(file);
         } else {
           fileName.textContent = "";
-          uploadedImage.src = "/placeholder.png";
+          // uploadedImage.src = "/placeholder.png";
         }
       }
 
       function updateImagePreview(file) {
         const reader = new FileReader();
         reader.onload = (e) => {
-          uploadedImage.src = e.target.result;
+          // uploadedImage.src = e.target.result;
         };
         reader.readAsDataURL(file);
       }
