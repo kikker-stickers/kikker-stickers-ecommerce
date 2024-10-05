@@ -24,7 +24,8 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
-const snipcart_api_key = process.env.SNIPCART_API_KEY;
+// const snipcart_api_key = process.env.SNIPCART_DEMO_API_KEY;
+const snipcart_api_key = process.env.SNIPCART_LIVE_API_KEY;
 
 function generatePriceTable(prices) {
   if (!Array.isArray(prices) || prices.length === 0) {
