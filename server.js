@@ -15,15 +15,14 @@ app.use(express.urlencoded({ limit: "50mb", extended: true }));
 // Serve static files from the client directory
 app.use(express.static(path.join(__dirname, "client")));
 
-
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
   api_key: process.env.CLOUDINARY_API_KEY,
   api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
-// const snipcart_api_key = process.env.SNIPCART_DEMO_API_KEY;
-const snipcart_api_key = process.env.SNIPCART_LIVE_API_KEY;
+const snipcart_api_key = process.env.SNIPCART_DEMO_API_KEY;
+// const snipcart_api_key = process.env.SNIPCART_LIVE_API_KEY;
 
 function generatePriceTable(prices) {
   if (!Array.isArray(prices) || prices.length === 0) {
@@ -110,19 +109,19 @@ app.get("/", (req, res) => {
     // Serve the landing page at the root endpoint
     const snipcartScriptRegex =
       /<div id="snipcart-script-placeholder"[^>]*>[\s\S]*?<\/div>/;
-  
+
     const snipcartScriptMatch = html.match(snipcartScriptRegex);
-  
+
     if (!snipcartScriptMatch) {
       console.error("Snipcart script placeholder not found in HTML");
       return res.status(500).send("Error updating Snipcart script");
     }
-  
+
     const snipcartUpdatedHtml = html.replace(
       snipcartScriptRegex,
       `<div hidden id="snipcart" data-api-key="${snipcart_api_key}"></div>`
     );
-  
+
     res.send(snipcartUpdatedHtml);
   });
   // res.sendFile(path.join(__dirname, "client", "landing.html"));

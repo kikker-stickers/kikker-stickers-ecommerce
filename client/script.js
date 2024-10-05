@@ -178,14 +178,18 @@ function updatePriceDisplay() {
 }
 
 function showSpinner() {
+  console.log("showSpinner");
   const spinner = document.getElementById("processing-spinner");
+  console.log("spinner", spinner);
   if (spinner) {
     spinner.style.display = "flex";
   }
 }
 
 function hideSpinner() {
+  console.log("hideSpinner");
   const spinner = document.getElementById("processing-spinner");
+  console.log("spinner", spinner);
   if (spinner) {
     spinner.style.display = "none";
   }
@@ -406,6 +410,9 @@ function md5(string) {
 function handleSubmit(event) {
   event.preventDefault();
 
+  // Show spinner when form is submitted
+  showSpinner();
+
   document.querySelectorAll(".error-message").forEach((el) => el.remove());
 
   let isValid = true;
@@ -448,7 +455,6 @@ function handleSubmit(event) {
     );
 
     if (priceData) {
-      window.showSpinner();
       uploadSticker()
         .then((cloudinaryUrl) => {
           const itemToAdd = {
@@ -481,8 +487,6 @@ function handleSubmit(event) {
               stickerImageUrl: cloudinaryUrl,
             },
           };
-          // console.log("Adding item to cart", itemToAdd);
-          // console.log("Snipcart", Snipcart.store.getState().cart.items);
           return Snipcart.api.cart.items.add(itemToAdd);
         })
         .then(() => {
@@ -492,9 +496,13 @@ function handleSubmit(event) {
           // Handle error
         })
         .finally(() => {
-          window.hideSpinner();
+          hideSpinner(); // Hide spinner after processing
         });
+    } else {
+      hideSpinner(); // Hide spinner if price data is not found
     }
+  } else {
+    hideSpinner(); // Hide spinner if form is invalid
   }
 }
 
@@ -588,7 +596,8 @@ function updateCartSummary() {
 
       if (cartSummaryHeader && state.cart.items.count > 0) {
         cartSummaryHeader.classList.remove("hidden");
-        cartSummaryHeader.querySelector("#cart-items-header").textContent = state.cart.items.count;
+        cartSummaryHeader.querySelector("#cart-items-header").textContent =
+          state.cart.items.count;
       }
     });
   }
