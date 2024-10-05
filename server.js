@@ -15,8 +15,6 @@ app.use(express.urlencoded({ limit: "50mb", extended: true }));
 // Serve static files from the client directory
 app.use(express.static(path.join(__dirname, "client")));
 
-// Handle favicon requests
-app.get("/favicon.ico", (req, res) => res.status(204)); // Respond with no content
 
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
@@ -103,8 +101,31 @@ function generatePriceTable(prices) {
 }
 
 app.get("/", (req, res) => {
-  // Serve the landing page at the root endpoint
-  res.sendFile(path.join(__dirname, "client", "landing.html"));
+  const landingPagePath = path.join(__dirname, "client", "landing.html");
+  fs.readFile(landingPagePath, "utf8", (err, html) => {
+    if (err) {
+      console.error("Error reading index file:", err);
+      return res.status(500).send("Error reading index file");
+    }
+    // Serve the landing page at the root endpoint
+    const snipcartScriptRegex =
+      /<div id="snipcart-script-placeholder"[^>]*>[\s\S]*?<\/div>/;
+  
+    const snipcartScriptMatch = html.match(snipcartScriptRegex);
+  
+    if (!snipcartScriptMatch) {
+      console.error("Snipcart script placeholder not found in HTML");
+      return res.status(500).send("Error updating Snipcart script");
+    }
+  
+    const snipcartUpdatedHtml = html.replace(
+      snipcartScriptRegex,
+      `<div hidden id="snipcart" data-api-key="${snipcart_api_key}"></div>`
+    );
+  
+    res.send(snipcartUpdatedHtml);
+  });
+  // res.sendFile(path.join(__dirname, "client", "landing.html"));
 });
 
 app.get("/create-decal", (req, res) => {
@@ -114,8 +135,8 @@ app.get("/create-decal", (req, res) => {
 
   fs.readFile(decalPagePath, "utf8", (err, html) => {
     if (err) {
-      console.error("Error reading index file:", err);
-      return res.status(500).send("Error reading index file");
+      console.error("Error reading create-decal file:", err);
+      return res.status(500).send("Error reading create-decal file");
     }
 
     fs.readFile(pricesPath, "utf8", (err, pricesJson) => {
