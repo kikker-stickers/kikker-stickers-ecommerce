@@ -7,9 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("orderForm").addEventListener("submit", handleSubmit);
   document.getElementById("shape").addEventListener("change", updateForm);
   document.getElementById("size").addEventListener("change", updateForm);
-  document
-    .getElementById("quantity")
-    .addEventListener("change", updatePriceDisplay);
+  document.getElementById("quantity").addEventListener("change", updateForm);
   document.getElementById("image").addEventListener("change", validateInput);
   document.getElementById("shape").addEventListener("change", validateInput);
   document.getElementById("size").addEventListener("change", validateInput);
@@ -54,6 +52,7 @@ function updateForm() {
   updateSizeOptions();
   updateQuantityOptions();
   updatePriceDisplay();
+  updatePriceTable();
 }
 
 function updateSizeOptions() {
@@ -603,9 +602,105 @@ function updateCartSummary() {
   }
 }
 
+function generatePriceTable(prices) {
+  if (!Array.isArray(prices) || prices.length === 0) {
+    return "<p class='text-gray-600'>No price data available</p>";
+  }
+
+  let tableHtml = `
+    <div class="overflow-x-auto">
+      <table class="min-w-full bg-white">
+        <thead class="bg-gray-100">
+          <tr>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Shape</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Size</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Quantity</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Price</th>
+            <th class="sr-only">Snipcart Data</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200">
+  `;
+
+  prices.forEach((item, index) => {
+    try {
+      const rowClass = index % 2 === 0 ? "bg-white" : "bg-gray-50";
+      tableHtml += `
+        <tr class="${rowClass}">
+          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">${
+            item.shape
+          }</td>
+          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">${
+            item.width
+          }" x ${item.height}"</td>
+          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">${
+            item.quantity
+          }</td>
+          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">$${item.price.toFixed(
+            2
+          )}</td>
+          <td class="sr-only">
+            <button
+              class="snipcart-add-item"
+              data-item-id="${item.id}"
+              data-item-price="${item.price.toFixed(2)}"
+              data-item-url="https://kikkerstickers.com/create-decal/"
+              data-item-stackable="always"
+              data-item-description="${item.width} x ${item.height} ${
+        item.shape
+      } sticker, quantity: ${item.quantity}"
+              data-item-image="placeholder.png"
+              data-item-name="${item.shape} Sticker"
+              data-item-custom1-name="Shape"
+              data-item-custom1-options="${item.shape}"
+              data-item-custom2-name="Size"
+              data-item-custom2-value="${item.width} x ${item.height}"
+              data-item-custom3-name="Quantity"
+              data-item-custom3-value="${item.quantity}"
+            >
+              Placholder
+            </button>
+          </td>
+        </tr>
+      `;
+    } catch (error) {
+      console.error("Error generating price table row:", error);
+    }
+  });
+
+  tableHtml += `
+        </tbody>
+      </table>
+    </div>
+  `;
+
+  return tableHtml;
+}
+
+function filterPriceTableByFormInputs() {
+  const shape = document.getElementById("shape").value;
+  const size = document.getElementById("size").value;
+  const quantity = parseInt(document.getElementById("quantity").value);
+
+  return allPrices.filter((item) => {
+    const shapeMatch = shape ? item.shape === shape : true;
+    const sizeMatch = size
+      ? formatSize(item.width, item.height) === size
+      : true;
+    const quantityMatch = !isNaN(quantity) ? item.quantity === quantity : true;
+
+    return shapeMatch && sizeMatch && quantityMatch;
+  });
+}
+
+function updatePriceTable() {
+  const filteredPrices = filterPriceTableByFormInputs();
+  const priceTable = generatePriceTable(filteredPrices);
+  document.getElementById("priceTable").innerHTML = priceTable;
+}
+
 function extractPriceDataFromTable() {
   const tableRows = document.querySelectorAll("#priceTable tbody tr");
-  allPrices = [];
 
   tableRows.forEach((row) => {
     const cells = row.querySelectorAll("td");
