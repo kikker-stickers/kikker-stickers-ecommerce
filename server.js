@@ -38,6 +38,7 @@ function generatePriceTable(prices) {
             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Size</th>
             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Quantity</th>
             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Price</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Per Sticker</th>
             <th class="sr-only">Snipcart Data</th>
           </tr>
         </thead>
@@ -47,6 +48,7 @@ function generatePriceTable(prices) {
   prices.forEach((item, index) => {
     try {
       const rowClass = index % 2 === 0 ? "bg-white" : "bg-gray-50";
+      const perStickerPrice = (item.price / item.quantity).toFixed(2); // Calculate price per sticker
       tableHtml += `
         <tr class="${rowClass}">
           <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">${
@@ -61,6 +63,7 @@ function generatePriceTable(prices) {
           <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">$${item.price.toFixed(
             2
           )}</td>
+          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">$${perStickerPrice}</td>
           <td class="sr-only">
             <button
               class="snipcart-add-item"
