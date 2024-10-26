@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   setupFormValidation();
   extractPriceDataFromTable();
   updateForm();
+  setupPriceTableRowClick(); // Add this line
   document.getElementById("orderForm").addEventListener("submit", handleSubmit);
   document.getElementById("shape").addEventListener("change", updateForm);
   document.getElementById("size").addEventListener("change", updateForm);
@@ -177,18 +178,14 @@ function updatePriceDisplay() {
 }
 
 function showSpinner() {
-  console.log("showSpinner");
   const spinner = document.getElementById("processing-spinner");
-  console.log("spinner", spinner);
   if (spinner) {
     spinner.style.display = "flex";
   }
 }
 
 function hideSpinner() {
-  console.log("hideSpinner");
   const spinner = document.getElementById("processing-spinner");
-  console.log("spinner", spinner);
   if (spinner) {
     spinner.style.display = "none";
   }
@@ -700,6 +697,7 @@ function updatePriceTable() {
   const filteredPrices = filterPriceTableByFormInputs();
   const priceTable = generatePriceTable(filteredPrices);
   document.getElementById("priceTable").innerHTML = priceTable;
+  setupPriceTableRowClick();
 }
 
 function extractPriceDataFromTable() {
@@ -721,7 +719,7 @@ function extractPriceDataFromTable() {
     }
   });
 
-  updateForm(); // Call updateForm after extracting price data
+  updateForm();
 }
 const uploadStickerCache = new Map();
 
@@ -747,7 +745,6 @@ function uploadSticker() {
 
       // Check if we have a cached result for this dataUrl
       if (uploadStickerCache.has(md5Hash)) {
-        // console.log("Cache hit for", md5Hash);
         resolve(uploadStickerCache.get(md5Hash));
         return;
       }
@@ -766,15 +763,50 @@ function uploadSticker() {
           return response.json();
         })
         .then((data) => {
-          // Cache the resolved imageUrl
           uploadStickerCache.set(md5Hash, data.imageUrl);
-          // console.log("Cache set for", md5Hash);
-          // console.log("Cache:", uploadStickerCache);
           resolve(data.imageUrl);
         })
         .catch((error) => {
           reject(error);
         });
     };
+  });
+}
+
+function forceSetFormValues(shape, size, quantity) {
+  const shapeSelect = document.getElementById("shape");
+  const sizeSelect = document.getElementById("size");
+  const quantitySelect = document.getElementById("quantity");
+
+  // Ensure elements are not disabled
+  shapeSelect.disabled = false;
+  sizeSelect.disabled = false;
+  quantitySelect.disabled = false;
+
+  shapeSelect.value = shape;
+  updateSizeOptions(); // Ensure size options are updated
+  sizeSelect.value = size;
+  updateQuantityOptions(); // Ensure quantity options are updated
+  quantitySelect.value = quantity;
+
+  // Update size and quantity options based on the selected shape
+}
+
+function setupPriceTableRowClick() {
+  const priceTableRows = document.querySelectorAll("#priceTable tbody tr");
+  priceTableRows.forEach((row) => {
+    row.addEventListener("click", () => {
+      const cells = row.querySelectorAll("td");
+      if (cells.length >= 5) {
+        const shape = cells[0].textContent.trim();
+        const size = `${cells[1].textContent.trim()}`;
+        const quantity = parseInt(cells[2].textContent.trim());
+
+        forceSetFormValues(shape, size, quantity);
+
+        updateForm(); // This may still be necessary to refresh the display
+        updatePriceDisplay(); // This may still be necessary to refresh the price display
+      }
+    });
   });
 }
