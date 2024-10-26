@@ -3646,5 +3646,1829 @@
     "width": 3.0,
     "height": 5.0,
     "id": "df632a3344cf"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 50,
+    "price": 34.33,
+    "width": 2.0,
+    "height": 2.0,
+    "id": "54c0ef330371"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 100,
+    "price": 45.32,
+    "width": 2.0,
+    "height": 2.0,
+    "id": "1b65d8c864be"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 250,
+    "price": 85.84,
+    "width": 2.0,
+    "height": 2.0,
+    "id": "a0ed5c16ab6f"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 300,
+    "price": 103.01,
+    "width": 2.0,
+    "height": 2.0,
+    "id": "e7a6480b638a"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 400,
+    "price": 137.34,
+    "width": 2.0,
+    "height": 2.0,
+    "id": "7bb0fbb8e8a5"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 500,
+    "price": 113.44,
+    "width": 2.0,
+    "height": 2.0,
+    "id": "3e37e703229b"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 600,
+    "price": 136.12,
+    "width": 2.0,
+    "height": 2.0,
+    "id": "01469216f064"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 750,
+    "price": 155.77,
+    "width": 2.0,
+    "height": 2.0,
+    "id": "1f7a80ffe7a2"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 1000,
+    "price": 178.57,
+    "width": 2.0,
+    "height": 2.0,
+    "id": "f0116b55163a"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 1500,
+    "price": 252.56,
+    "width": 2.0,
+    "height": 2.0,
+    "id": "80a1fd3e0ec7"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 2000,
+    "price": 315.85,
+    "width": 2.0,
+    "height": 2.0,
+    "id": "83fe08bc55a1"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 2500,
+    "price": 370.89,
+    "width": 2.0,
+    "height": 2.0,
+    "id": "fb4aceb89e48"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 3000,
+    "price": 445.07,
+    "width": 2.0,
+    "height": 2.0,
+    "id": "a7344b8250eb"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 5000,
+    "price": 604.24,
+    "width": 2.0,
+    "height": 2.0,
+    "id": "ba8c662b56c1"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 6000,
+    "price": 725.09,
+    "width": 2.0,
+    "height": 2.0,
+    "id": "02797ec37cc5"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 10000,
+    "price": 1099.28,
+    "width": 2.0,
+    "height": 2.0,
+    "id": "e4adb7a8dc51"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 15000,
+    "price": 1580.28,
+    "width": 2.0,
+    "height": 2.0,
+    "id": "aab8239af614"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 20000,
+    "price": 2098.72,
+    "width": 2.0,
+    "height": 2.0,
+    "id": "3842c9320dad"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 25000,
+    "price": 2610.40,
+    "width": 2.0,
+    "height": 2.0,
+    "id": "ee1afb09c231"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 50,
+    "price": 53.65,
+    "width": 2.5,
+    "height": 2.5,
+    "id": "74eb7d41b8c4"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 100,
+    "price": 70.82,
+    "width": 2.5,
+    "height": 2.5,
+    "id": "7b142fb9ffa3"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 250,
+    "price": 134.12,
+    "width": 2.5,
+    "height": 2.5,
+    "id": "4e356af1bba6"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 300,
+    "price": 160.95,
+    "width": 2.5,
+    "height": 2.5,
+    "id": "ce9bd3c2e5a5"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 400,
+    "price": 214.60,
+    "width": 2.5,
+    "height": 2.5,
+    "id": "87b39a1069b3"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 500,
+    "price": 177.24,
+    "width": 2.5,
+    "height": 2.5,
+    "id": "10c49932ce2e"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 600,
+    "price": 212.69,
+    "width": 2.5,
+    "height": 2.5,
+    "id": "094d130dc199"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 750,
+    "price": 243.39,
+    "width": 2.5,
+    "height": 2.5,
+    "id": "9320713d4a6d"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 1000,
+    "price": 279.02,
+    "width": 2.5,
+    "height": 2.5,
+    "id": "f893f0764fb1"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 1500,
+    "price": 394.63,
+    "width": 2.5,
+    "height": 2.5,
+    "id": "d54f469e42f9"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 2000,
+    "price": 493.52,
+    "width": 2.5,
+    "height": 2.5,
+    "id": "c5053b7552cf"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 2500,
+    "price": 579.51,
+    "width": 2.5,
+    "height": 2.5,
+    "id": "31e967db70c6"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 3000,
+    "price": 695.42,
+    "width": 2.5,
+    "height": 2.5,
+    "id": "6beff8867cec"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 5000,
+    "price": 944.13,
+    "width": 2.5,
+    "height": 2.5,
+    "id": "7eeb07dff1fd"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 6000,
+    "price": 1132.95,
+    "width": 2.5,
+    "height": 2.5,
+    "id": "7747179bd44b"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 10000,
+    "price": 1717.63,
+    "width": 2.5,
+    "height": 2.5,
+    "id": "8175d8a534bf"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 15000,
+    "price": 2469.19,
+    "width": 2.5,
+    "height": 2.5,
+    "id": "8dab1d5bc847"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 20000,
+    "price": 3279.25,
+    "width": 2.5,
+    "height": 2.5,
+    "id": "dd27ce952948"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 25000,
+    "price": 4078.75,
+    "width": 2.5,
+    "height": 2.5,
+    "id": "f568627fdf93"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 50,
+    "price": 77.26,
+    "width": 3.0,
+    "height": 3.0,
+    "id": "302a780ab6a5"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 100,
+    "price": 101.97,
+    "width": 3.0,
+    "height": 3.0,
+    "id": "fdf8da845d27"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 250,
+    "price": 193.14,
+    "width": 3.0,
+    "height": 3.0,
+    "id": "7be9e246e909"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 300,
+    "price": 231.76,
+    "width": 3.0,
+    "height": 3.0,
+    "id": "b70390bd1d68"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 400,
+    "price": 309.02,
+    "width": 3.0,
+    "height": 3.0,
+    "id": "b53f453e43a4"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 500,
+    "price": 255.24,
+    "width": 3.0,
+    "height": 3.0,
+    "id": "c7a5918c48f9"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 600,
+    "price": 306.28,
+    "width": 3.0,
+    "height": 3.0,
+    "id": "7125663f7af5"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 750,
+    "price": 350.48,
+    "width": 3.0,
+    "height": 3.0,
+    "id": "70463178a0b3"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 1000,
+    "price": 401.78,
+    "width": 3.0,
+    "height": 3.0,
+    "id": "9a24816d1698"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 1500,
+    "price": 568.27,
+    "width": 3.0,
+    "height": 3.0,
+    "id": "56859c7e0108"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 2000,
+    "price": 710.66,
+    "width": 3.0,
+    "height": 3.0,
+    "id": "a0be5c2b43aa"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 2500,
+    "price": 834.51,
+    "width": 3.0,
+    "height": 3.0,
+    "id": "34ec45b22192"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 3000,
+    "price": 1001.40,
+    "width": 3.0,
+    "height": 3.0,
+    "id": "53aa14854608"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 5000,
+    "price": 1359.54,
+    "width": 3.0,
+    "height": 3.0,
+    "id": "42ef966334f7"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 6000,
+    "price": 1631.45,
+    "width": 3.0,
+    "height": 3.0,
+    "id": "f957f226fcb8"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 10000,
+    "price": 2473.38,
+    "width": 3.0,
+    "height": 3.0,
+    "id": "455844dff343"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 15000,
+    "price": 3555.63,
+    "width": 3.0,
+    "height": 3.0,
+    "id": "769226c14e2f"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 20000,
+    "price": 4722.12,
+    "width": 3.0,
+    "height": 3.0,
+    "id": "6252c3a19890"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 25000,
+    "price": 5873.40,
+    "width": 3.0,
+    "height": 3.0,
+    "id": "aafa4e103321"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 50,
+    "price": 105.16,
+    "width": 3.5,
+    "height": 3.5,
+    "id": "9bc191db67b6"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 100,
+    "price": 138.80,
+    "width": 3.5,
+    "height": 3.5,
+    "id": "cfea4601b602"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 250,
+    "price": 262.89,
+    "width": 3.5,
+    "height": 3.5,
+    "id": "cc8babfe921d"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 300,
+    "price": 315.46,
+    "width": 3.5,
+    "height": 3.5,
+    "id": "5b32950bb8d8"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 400,
+    "price": 420.62,
+    "width": 3.5,
+    "height": 3.5,
+    "id": "65c4ff55cab2"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 500,
+    "price": 347.40,
+    "width": 3.5,
+    "height": 3.5,
+    "id": "de9cb826c410"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 600,
+    "price": 416.88,
+    "width": 3.5,
+    "height": 3.5,
+    "id": "324fc147e3f0"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 750,
+    "price": 477.04,
+    "width": 3.5,
+    "height": 3.5,
+    "id": "47a60a3aacbe"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 1000,
+    "price": 546.87,
+    "width": 3.5,
+    "height": 3.5,
+    "id": "9522f3cce772"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 1500,
+    "price": 773.47,
+    "width": 3.5,
+    "height": 3.5,
+    "id": "e827e1e14a42"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 2000,
+    "price": 967.29,
+    "width": 3.5,
+    "height": 3.5,
+    "id": "3034440f2dfa"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 2500,
+    "price": 1135.85,
+    "width": 3.5,
+    "height": 3.5,
+    "id": "51d6d979e1bd"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 3000,
+    "price": 1363.02,
+    "width": 3.5,
+    "height": 3.5,
+    "id": "e8e1a90ee9cf"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 5000,
+    "price": 1850.49,
+    "width": 3.5,
+    "height": 3.5,
+    "id": "60096fe3d64a"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 6000,
+    "price": 2220.58,
+    "width": 3.5,
+    "height": 3.5,
+    "id": "256e6fc759b8"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 10000,
+    "price": 3366.55,
+    "width": 3.5,
+    "height": 3.5,
+    "id": "d365db3c57c2"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 15000,
+    "price": 4839.61,
+    "width": 3.5,
+    "height": 3.5,
+    "id": "cfb294a65f21"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 20000,
+    "price": 6427.33,
+    "width": 3.5,
+    "height": 3.5,
+    "id": "d60f6f17a886"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 25000,
+    "price": 7994.35,
+    "width": 3.5,
+    "height": 3.5,
+    "id": "110820f26154"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 50,
+    "price": 51.51,
+    "width": 3.0,
+    "height": 2.0,
+    "id": "cc8c9dc79b93"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 100,
+    "price": 67.99,
+    "width": 3.0,
+    "height": 2.0,
+    "id": "9cbbd9e92c74"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 250,
+    "price": 128.77,
+    "width": 3.0,
+    "height": 2.0,
+    "id": "05508cdf8783"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 300,
+    "price": 154.50,
+    "width": 3.0,
+    "height": 2.0,
+    "id": "38f9c423b61e"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 400,
+    "price": 206.01,
+    "width": 3.0,
+    "height": 2.0,
+    "id": "121a7d359210"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 500,
+    "price": 170.16,
+    "width": 3.0,
+    "height": 2.0,
+    "id": "dd847e4953e1"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 600,
+    "price": 204.19,
+    "width": 3.0,
+    "height": 2.0,
+    "id": "4f159c5d8e91"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 750,
+    "price": 233.65,
+    "width": 3.0,
+    "height": 2.0,
+    "id": "16db0f33cb73"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 1000,
+    "price": 267.85,
+    "width": 3.0,
+    "height": 2.0,
+    "id": "89102e7bfafd"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 1500,
+    "price": 378.85,
+    "width": 3.0,
+    "height": 2.0,
+    "id": "002dc8b3c3fd"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 2000,
+    "price": 473.77,
+    "width": 3.0,
+    "height": 2.0,
+    "id": "de7a8e4c8043"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 2500,
+    "price": 556.34,
+    "width": 3.0,
+    "height": 2.0,
+    "id": "5d079a7ea8a0"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 3000,
+    "price": 667.60,
+    "width": 3.0,
+    "height": 2.0,
+    "id": "6534f5a698fc"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 5000,
+    "price": 906.36,
+    "width": 3.0,
+    "height": 2.0,
+    "id": "231eaaf0e37b"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 6000,
+    "price": 1087.63,
+    "width": 3.0,
+    "height": 2.0,
+    "id": "ab152356eadf"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 10000,
+    "price": 1648.92,
+    "width": 3.0,
+    "height": 2.0,
+    "id": "5aa5b31f3c64"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 15000,
+    "price": 2370.42,
+    "width": 3.0,
+    "height": 2.0,
+    "id": "2b7b6dcd7cc6"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 20000,
+    "price": 3148.08,
+    "width": 3.0,
+    "height": 2.0,
+    "id": "abc15f57ca82"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 25000,
+    "price": 3915.60,
+    "width": 3.0,
+    "height": 2.0,
+    "id": "72edcded9a6c"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 50,
+    "price": 51.51,
+    "width": 4.0,
+    "height": 2.0,
+    "id": "24434de09044"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 100,
+    "price": 67.99,
+    "width": 4.0,
+    "height": 2.0,
+    "id": "670f0395ee7f"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 250,
+    "price": 128.77,
+    "width": 4.0,
+    "height": 2.0,
+    "id": "95a326240a7d"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 300,
+    "price": 154.50,
+    "width": 4.0,
+    "height": 2.0,
+    "id": "ba461ed6bfd9"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 400,
+    "price": 206.01,
+    "width": 4.0,
+    "height": 2.0,
+    "id": "d9e151f59dc4"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 500,
+    "price": 170.16,
+    "width": 4.0,
+    "height": 2.0,
+    "id": "3359d9043ca4"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 600,
+    "price": 204.19,
+    "width": 4.0,
+    "height": 2.0,
+    "id": "1f1f08823c77"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 750,
+    "price": 233.65,
+    "width": 4.0,
+    "height": 2.0,
+    "id": "ba57a6cd9cf1"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 1000,
+    "price": 267.85,
+    "width": 4.0,
+    "height": 2.0,
+    "id": "932b2cf06573"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 1500,
+    "price": 378.85,
+    "width": 4.0,
+    "height": 2.0,
+    "id": "030a8f3667d2"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 2000,
+    "price": 473.77,
+    "width": 4.0,
+    "height": 2.0,
+    "id": "4ca0135b47a6"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 2500,
+    "price": 556.34,
+    "width": 4.0,
+    "height": 2.0,
+    "id": "8c56b4814353"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 3000,
+    "price": 667.60,
+    "width": 4.0,
+    "height": 2.0,
+    "id": "dc5886c81987"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 5000,
+    "price": 906.36,
+    "width": 4.0,
+    "height": 2.0,
+    "id": "ae3e8cd12818"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 6000,
+    "price": 1087.63,
+    "width": 4.0,
+    "height": 2.0,
+    "id": "0ae6f18951e1"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 10000,
+    "price": 1648.92,
+    "width": 4.0,
+    "height": 2.0,
+    "id": "64f8b02ecf3e"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 15000,
+    "price": 2370.42,
+    "width": 4.0,
+    "height": 2.0,
+    "id": "961f34db503a"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 20000,
+    "price": 3148.08,
+    "width": 4.0,
+    "height": 2.0,
+    "id": "6486e649b4b0"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 25000,
+    "price": 3915.60,
+    "width": 4.0,
+    "height": 2.0,
+    "id": "750ab1a31653"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 50,
+    "price": 51.51,
+    "width": 5.0,
+    "height": 2.0,
+    "id": "e026430486e9"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 100,
+    "price": 67.99,
+    "width": 5.0,
+    "height": 2.0,
+    "id": "9a82ec07c124"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 250,
+    "price": 128.77,
+    "width": 5.0,
+    "height": 2.0,
+    "id": "390d937bbb7b"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 300,
+    "price": 154.50,
+    "width": 5.0,
+    "height": 2.0,
+    "id": "05f8d6b4be64"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 400,
+    "price": 206.01,
+    "width": 5.0,
+    "height": 2.0,
+    "id": "de5d82e99fb2"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 500,
+    "price": 170.16,
+    "width": 5.0,
+    "height": 2.0,
+    "id": "6b9d76cd3613"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 600,
+    "price": 204.19,
+    "width": 5.0,
+    "height": 2.0,
+    "id": "a3bd72a9a783"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 750,
+    "price": 233.65,
+    "width": 5.0,
+    "height": 2.0,
+    "id": "1a3d3acd2743"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 1000,
+    "price": 267.85,
+    "width": 5.0,
+    "height": 2.0,
+    "id": "91da4cbc25f1"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 1500,
+    "price": 378.85,
+    "width": 5.0,
+    "height": 2.0,
+    "id": "b5633283ae10"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 2000,
+    "price": 473.77,
+    "width": 5.0,
+    "height": 2.0,
+    "id": "0960ed5b509f"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 2500,
+    "price": 556.34,
+    "width": 5.0,
+    "height": 2.0,
+    "id": "a62d1775f79d"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 3000,
+    "price": 667.60,
+    "width": 5.0,
+    "height": 2.0,
+    "id": "17c858e9ebd4"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 5000,
+    "price": 906.36,
+    "width": 5.0,
+    "height": 2.0,
+    "id": "0f3d54eff7b7"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 6000,
+    "price": 1087.63,
+    "width": 5.0,
+    "height": 2.0,
+    "id": "508304826355"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 10000,
+    "price": 1648.92,
+    "width": 5.0,
+    "height": 2.0,
+    "id": "de960699df9d"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 15000,
+    "price": 2370.42,
+    "width": 5.0,
+    "height": 2.0,
+    "id": "7813d105537d"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 20000,
+    "price": 3148.08,
+    "width": 5.0,
+    "height": 2.0,
+    "id": "6da694d74607"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 25000,
+    "price": 3915.60,
+    "width": 5.0,
+    "height": 2.0,
+    "id": "e620a35524c5"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 50,
+    "price": 51.51,
+    "width": 5.0,
+    "height": 3.0,
+    "id": "ceff675c88b5"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 100,
+    "price": 67.99,
+    "width": 5.0,
+    "height": 3.0,
+    "id": "6510fd653bd9"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 250,
+    "price": 128.77,
+    "width": 5.0,
+    "height": 3.0,
+    "id": "0ec5be7556e0"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 300,
+    "price": 154.50,
+    "width": 5.0,
+    "height": 3.0,
+    "id": "feeb6bea810d"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 400,
+    "price": 206.01,
+    "width": 5.0,
+    "height": 3.0,
+    "id": "a5e6a0d9dee5"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 500,
+    "price": 170.16,
+    "width": 5.0,
+    "height": 3.0,
+    "id": "800d5d0cc2fb"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 600,
+    "price": 204.19,
+    "width": 5.0,
+    "height": 3.0,
+    "id": "effde43c83a4"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 750,
+    "price": 233.65,
+    "width": 5.0,
+    "height": 3.0,
+    "id": "75aa1d749e8a"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 1000,
+    "price": 267.85,
+    "width": 5.0,
+    "height": 3.0,
+    "id": "aaecdc37c8f2"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 1500,
+    "price": 378.85,
+    "width": 5.0,
+    "height": 3.0,
+    "id": "3f24ca3f3a6b"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 2000,
+    "price": 473.77,
+    "width": 5.0,
+    "height": 3.0,
+    "id": "70353109de12"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 2500,
+    "price": 556.34,
+    "width": 5.0,
+    "height": 3.0,
+    "id": "1497cee55ae8"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 3000,
+    "price": 667.60,
+    "width": 5.0,
+    "height": 3.0,
+    "id": "4a80b7c98867"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 5000,
+    "price": 906.36,
+    "width": 5.0,
+    "height": 3.0,
+    "id": "20168614923d"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 6000,
+    "price": 1087.63,
+    "width": 5.0,
+    "height": 3.0,
+    "id": "90fc4073c093"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 10000,
+    "price": 1648.92,
+    "width": 5.0,
+    "height": 3.0,
+    "id": "6a641537172a"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 15000,
+    "price": 2370.42,
+    "width": 5.0,
+    "height": 3.0,
+    "id": "dc1b32a4592b"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 20000,
+    "price": 3148.08,
+    "width": 5.0,
+    "height": 3.0,
+    "id": "fe521cc3ff7d"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 25000,
+    "price": 3915.60,
+    "width": 5.0,
+    "height": 3.0,
+    "id": "4097eaf773e2"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 50,
+    "price": 51.51,
+    "width": 2.0,
+    "height": 3.0,
+    "id": "75ca1c013583"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 100,
+    "price": 67.99,
+    "width": 2.0,
+    "height": 3.0,
+    "id": "b3f000bcbf90"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 250,
+    "price": 128.77,
+    "width": 2.0,
+    "height": 3.0,
+    "id": "93c4f54b39e6"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 300,
+    "price": 154.50,
+    "width": 2.0,
+    "height": 3.0,
+    "id": "2fc2be6b4b8e"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 400,
+    "price": 206.01,
+    "width": 2.0,
+    "height": 3.0,
+    "id": "b3c101fe0517"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 500,
+    "price": 170.16,
+    "width": 2.0,
+    "height": 3.0,
+    "id": "c4aabb9e9c03"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 600,
+    "price": 204.19,
+    "width": 2.0,
+    "height": 3.0,
+    "id": "4136b8b82190"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 750,
+    "price": 233.65,
+    "width": 2.0,
+    "height": 3.0,
+    "id": "df72f12a37e4"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 1000,
+    "price": 267.85,
+    "width": 2.0,
+    "height": 3.0,
+    "id": "79b303ea4fb8"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 1500,
+    "price": 378.85,
+    "width": 2.0,
+    "height": 3.0,
+    "id": "06f1d1052c70"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 2000,
+    "price": 473.77,
+    "width": 2.0,
+    "height": 3.0,
+    "id": "ff355f0d8b8f"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 2500,
+    "price": 556.34,
+    "width": 2.0,
+    "height": 3.0,
+    "id": "7bc9df5bf015"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 3000,
+    "price": 667.60,
+    "width": 2.0,
+    "height": 3.0,
+    "id": "b9682f7a03ed"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 5000,
+    "price": 906.36,
+    "width": 2.0,
+    "height": 3.0,
+    "id": "2ce1651b9fb4"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 6000,
+    "price": 1087.63,
+    "width": 2.0,
+    "height": 3.0,
+    "id": "9cd896ae5d64"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 10000,
+    "price": 1648.92,
+    "width": 2.0,
+    "height": 3.0,
+    "id": "95482c81a3d4"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 15000,
+    "price": 2370.42,
+    "width": 2.0,
+    "height": 3.0,
+    "id": "d907c87ff2bd"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 20000,
+    "price": 3148.08,
+    "width": 2.0,
+    "height": 3.0,
+    "id": "4010b45b651b"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 25000,
+    "price": 3915.60,
+    "width": 2.0,
+    "height": 3.0,
+    "id": "9c357771fb76"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 50,
+    "price": 51.51,
+    "width": 2.0,
+    "height": 4.0,
+    "id": "0ad05e6cc3b8"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 100,
+    "price": 67.99,
+    "width": 2.0,
+    "height": 4.0,
+    "id": "c8e105e0d3c6"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 250,
+    "price": 128.77,
+    "width": 2.0,
+    "height": 4.0,
+    "id": "7f2bc1c7ffd3"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 300,
+    "price": 154.50,
+    "width": 2.0,
+    "height": 4.0,
+    "id": "59d2b8001d0c"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 400,
+    "price": 206.01,
+    "width": 2.0,
+    "height": 4.0,
+    "id": "71e40b425663"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 500,
+    "price": 170.16,
+    "width": 2.0,
+    "height": 4.0,
+    "id": "4c3b06c1065c"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 600,
+    "price": 204.19,
+    "width": 2.0,
+    "height": 4.0,
+    "id": "f990b78aeaed"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 750,
+    "price": 233.65,
+    "width": 2.0,
+    "height": 4.0,
+    "id": "e9323f5f7387"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 1000,
+    "price": 267.85,
+    "width": 2.0,
+    "height": 4.0,
+    "id": "23468eaf06ae"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 1500,
+    "price": 378.85,
+    "width": 2.0,
+    "height": 4.0,
+    "id": "9043af774603"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 2000,
+    "price": 473.77,
+    "width": 2.0,
+    "height": 4.0,
+    "id": "369bb5ea6ff5"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 2500,
+    "price": 556.34,
+    "width": 2.0,
+    "height": 4.0,
+    "id": "825002b529fe"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 3000,
+    "price": 667.60,
+    "width": 2.0,
+    "height": 4.0,
+    "id": "d6a9570965b5"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 5000,
+    "price": 906.36,
+    "width": 2.0,
+    "height": 4.0,
+    "id": "0f7ec06d7764"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 6000,
+    "price": 1087.63,
+    "width": 2.0,
+    "height": 4.0,
+    "id": "e71c745778be"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 10000,
+    "price": 1648.92,
+    "width": 2.0,
+    "height": 4.0,
+    "id": "97becab76fa9"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 15000,
+    "price": 2370.42,
+    "width": 2.0,
+    "height": 4.0,
+    "id": "478271a7e794"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 20000,
+    "price": 3148.08,
+    "width": 2.0,
+    "height": 4.0,
+    "id": "ddb7cccfd512"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 25000,
+    "price": 3915.60,
+    "width": 2.0,
+    "height": 4.0,
+    "id": "4cacdfd623c0"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 50,
+    "price": 51.51,
+    "width": 2.0,
+    "height": 5.0,
+    "id": "57854738833c"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 100,
+    "price": 67.99,
+    "width": 2.0,
+    "height": 5.0,
+    "id": "584456847c1a"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 250,
+    "price": 128.77,
+    "width": 2.0,
+    "height": 5.0,
+    "id": "0178ff8eb791"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 300,
+    "price": 154.50,
+    "width": 2.0,
+    "height": 5.0,
+    "id": "df93ee3be47b"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 400,
+    "price": 206.01,
+    "width": 2.0,
+    "height": 5.0,
+    "id": "28ae1c9f6cd2"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 500,
+    "price": 170.16,
+    "width": 2.0,
+    "height": 5.0,
+    "id": "0a26bd5aeba9"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 600,
+    "price": 204.19,
+    "width": 2.0,
+    "height": 5.0,
+    "id": "c06b98bb4da7"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 750,
+    "price": 233.65,
+    "width": 2.0,
+    "height": 5.0,
+    "id": "37ba9992aea5"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 1000,
+    "price": 267.85,
+    "width": 2.0,
+    "height": 5.0,
+    "id": "1ded7c94bb88"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 1500,
+    "price": 378.85,
+    "width": 2.0,
+    "height": 5.0,
+    "id": "5898f7b38a4e"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 2000,
+    "price": 473.77,
+    "width": 2.0,
+    "height": 5.0,
+    "id": "88de74daf5c1"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 2500,
+    "price": 556.34,
+    "width": 2.0,
+    "height": 5.0,
+    "id": "0d5b2cafc568"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 3000,
+    "price": 667.60,
+    "width": 2.0,
+    "height": 5.0,
+    "id": "b98cb04ad7e3"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 5000,
+    "price": 906.36,
+    "width": 2.0,
+    "height": 5.0,
+    "id": "897a4652f51c"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 6000,
+    "price": 1087.63,
+    "width": 2.0,
+    "height": 5.0,
+    "id": "a003f2562f9c"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 10000,
+    "price": 1648.92,
+    "width": 2.0,
+    "height": 5.0,
+    "id": "f90017f6ee82"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 15000,
+    "price": 2370.42,
+    "width": 2.0,
+    "height": 5.0,
+    "id": "85bf00abf707"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 20000,
+    "price": 3148.08,
+    "width": 2.0,
+    "height": 5.0,
+    "id": "8a082d980efe"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 25000,
+    "price": 3915.60,
+    "width": 2.0,
+    "height": 5.0,
+    "id": "744531b5fe6b"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 50,
+    "price": 51.51,
+    "width": 3.0,
+    "height": 5.0,
+    "id": "bf377f50d22f"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 100,
+    "price": 67.99,
+    "width": 3.0,
+    "height": 5.0,
+    "id": "c1d7f142edf4"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 250,
+    "price": 128.77,
+    "width": 3.0,
+    "height": 5.0,
+    "id": "4b487f10470c"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 300,
+    "price": 154.50,
+    "width": 3.0,
+    "height": 5.0,
+    "id": "6e03faa24e8d"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 400,
+    "price": 206.01,
+    "width": 3.0,
+    "height": 5.0,
+    "id": "402af7b61c27"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 500,
+    "price": 170.16,
+    "width": 3.0,
+    "height": 5.0,
+    "id": "73f487fe189f"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 600,
+    "price": 204.19,
+    "width": 3.0,
+    "height": 5.0,
+    "id": "1671595a8b18"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 750,
+    "price": 233.65,
+    "width": 3.0,
+    "height": 5.0,
+    "id": "b620c0a56baf"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 1000,
+    "price": 267.85,
+    "width": 3.0,
+    "height": 5.0,
+    "id": "f28c4e1d8732"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 1500,
+    "price": 378.85,
+    "width": 3.0,
+    "height": 5.0,
+    "id": "8f38cf4c7eee"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 2000,
+    "price": 473.77,
+    "width": 3.0,
+    "height": 5.0,
+    "id": "f8e4ee2c2ff0"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 2500,
+    "price": 556.34,
+    "width": 3.0,
+    "height": 5.0,
+    "id": "8d5d379b6432"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 3000,
+    "price": 667.60,
+    "width": 3.0,
+    "height": 5.0,
+    "id": "701ee08f5f58"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 5000,
+    "price": 906.36,
+    "width": 3.0,
+    "height": 5.0,
+    "id": "4f1bff5ac5b7"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 6000,
+    "price": 1087.63,
+    "width": 3.0,
+    "height": 5.0,
+    "id": "197ab6b79c9a"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 10000,
+    "price": 1648.92,
+    "width": 3.0,
+    "height": 5.0,
+    "id": "f04b4e45e22c"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 15000,
+    "price": 2370.42,
+    "width": 3.0,
+    "height": 5.0,
+    "id": "2c5dfa45c3d7"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 20000,
+    "price": 3148.08,
+    "width": 3.0,
+    "height": 5.0,
+    "id": "b34dad938940"
+  },
+  {
+    "shape": "Custom",
+    "quantity": 25000,
+    "price": 3915.60,
+    "width": 3.0,
+    "height": 5.0,
+    "id": "bc1b58509818"
   }
 ]
